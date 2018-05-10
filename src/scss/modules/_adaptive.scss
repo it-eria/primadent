@@ -1,0 +1,343 @@
+// Media queries by bootstrap grid
+@media screen and (min-width: 0px) {
+  .main-banner {
+    &__carousel {
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  .no-gutter-on-sm {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .main-banner {
+    &__carousel {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    &__carousel-slide {
+      max-width: 540px;
+    }
+  }
+  .no-gutter-on-sm {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-banner {
+    &__carousel-slide {
+      max-width: 720px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-banner {
+    &__carousel-slide {
+      max-width: 960px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-banner {
+    &__carousel-slide {
+      max-width: 1140px;
+    }
+  }
+}
+
+@media screen and (min-width: 1470px) {
+  .main-banner {
+    &__carousel-slide {
+      max-width: 1440px;
+    }
+  }
+}
+
+
+
+// Custom media queries
+@media screen and (max-width: 575px) {
+  body,html {
+    font-size: 10px;
+  }
+  .header, .main-banner__bottom-panel {
+    position: relative;
+  }
+  .icon {
+    &-service {
+      &:before {
+        width: 37px;
+        height: 33px;
+      }
+    }
+  }
+  .reviews {
+    .carousel-ctrl-btn {
+      top: 85px !important;
+    }
+  }
+  .carousel__gallery {
+    .gallery__slide {
+      .photo-item {
+        height: 150px;
+      }
+    } 
+  } 
+}
+
+@media screen and (max-width: 991px) {
+  body, html {
+    font-size: 12px;
+  }
+  .header {
+    &__main-nav {
+      height: auto;
+      max-height: 0;
+      transition: all .3s ease-in-out;
+      overflow: hidden;
+      &.uncollapsed {
+        max-height: 100vh;
+        padding-top: 30px;
+      }
+      ul {
+        li {
+          display: block;
+          text-align: center;
+          margin: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &__languages {
+      height: auto;
+      max-height: 0;
+      transition: all .3s ease-in-out;
+      overflow: hidden;
+      display: block;
+      text-align: center;
+      &.uncollapsed {
+        max-height: 100vh;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 10px;
+        height: 2px;
+        background-color: $red;
+      }
+      & > li {
+        display: inline-block;
+        padding: 5px;
+        vertical-align: middle;
+        white-space: nowrap;
+        span {
+          display: inline-block;
+          color: $red;
+          vertical-align: middle;
+        }
+        &:after {
+          display: none;
+        }
+        & > ul {
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          background-color: transparent;
+          top: 0;
+          max-height: 100vh;
+          & > li {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .btn_red {
+      margin: 15px auto;
+    }
+    .mob-register-btn {
+      &.uncollapsed {
+        max-height: 100vh;
+      }
+    }
+  }
+  .main-banner {
+    &__contacts {
+      li {
+        & + li {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .content-block {
+    padding: 25px 0;
+  }
+  .about-us {
+    &__thumbnail {
+      margin-left: 0;
+      margin-bottom: 0;
+      &:before, &:after {
+        display: none;
+      }
+    }
+    &__descr {
+      position: relative;
+    }
+  }
+  .services {
+    &__descr {
+      position: relative;
+    }
+  }
+  .team {
+    justify-content: center;
+    &__carousel_photo {
+      top: 0;
+      &__slide {
+        .photo-block {
+          padding-top: 0;
+          width: 222px;
+          height: 315px;
+        }
+      }
+    }
+    .detail-side {
+      position: relative;
+      top: -60px;
+    }
+    .dark-text-block {
+      padding: 80px 25px 25px 25px;
+    }
+  }
+  .reviews {
+    top: 0;
+    &__photo {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .dark-text-block {
+      padding-right: 25px;
+    }
+    .carousel-ctrl-btn {
+      top: -45px;
+      &_prev {
+        left: 15px;
+      }
+      &_next {
+        right: 15px;
+      }
+    }
+  }
+  .dark-text-block {
+    padding: 25px;
+    .btn {
+      max-width: 100%;
+    }
+  }
+  .icon-down-arr {
+    &:before {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .etaps {
+    .dark-text-block {
+      max-width: 100%;
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+  .technology {
+    .text-side {
+      position: relative;
+      top: auto;
+      bottom: auto;
+    }
+  } 
+  .doctor {
+    &__about {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  body, html {
+    font-size: 12px;
+  }
+  .header {
+    &__main-nav {
+      ul {
+        li {
+          margin: 0 10px;
+        }
+        .logo-item {
+          img {
+            max-width: 160px;
+          }
+        }
+      }
+    }
+    &__languages {
+      & > li {
+        &:after {
+          top: 11px;
+        }
+      }
+    }
+  }
+  .main-banner {
+    &__socials {
+      li {
+        margin-right: 20px;
+      }
+    }
+    &__contacts {
+      li {
+        & + li {
+          margin-left: 30px;
+        }
+        a {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .dark-text-block {
+    padding: 35px;
+  }
+  .team {
+    .dark-text-block {
+      padding: 25px 70px 25px 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1469px) {
+  body, html {
+    font-size: 14px;
+  }
+  .team {
+    .dark-text-block {
+      padding-right: 100px;
+    }
+  }
+}

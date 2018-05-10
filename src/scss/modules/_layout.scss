@@ -1,0 +1,1041 @@
+// Header
+.header {
+  min-width: 320px;
+  background-color: $header-bg-color;
+  color: $white;
+  padding: 14px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  // Language select
+  &__languages {
+    display: inline-block;
+    list-style: none;
+    & > li {
+      display: inline-block;
+      padding: 5px 25px 5px 5px;
+      font-family: $ubuntu-regular;
+      font-size: 1rem;
+      text-transform: uppercase;
+      position: relative;
+      cursor: pointer;
+      &:after {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 6px;
+        background-image: url(../img/lang-dropdown-arr.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+        position: absolute;
+        right: 0;
+        top: 14px;
+      }
+      & > ul {
+        width: 100%;
+        background-color: $header-bg-color;
+        list-style: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+        & > li {
+          padding: 0 5px;
+        }
+      }
+      a {
+        display: block;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: $red;
+        }
+      }
+      &:hover {
+        & > ul {
+          max-height: 100vh;
+        }
+      }
+    }
+  }
+  // Main navigation
+  &__main-nav {
+    ul {
+      list-style: none;
+      font-size: 0;
+      position: relative;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.25rem;
+        text-transform: capitalize;
+        margin: 0 20px;
+        width: auto;
+        transition: all 1s ease-in-out;
+        overflow: hidden;
+        position: relative;
+        top: -2px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          transition: color .3s ease-in-out;
+          &:hover {
+            color: $red;
+          }
+        }
+        img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .logo-item {
+        padding-bottom: 10px;
+        &:after {
+          content: '';
+          display: block;
+          width: 101px;
+          height: 2px;
+          background-color: $red;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+  }
+  // Socials list
+  &__socials {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 1rem;
+      opacity: .4;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  // Mobile logo
+  .mob-logo {
+    max-width: 160px;
+  }
+  .mob-register-btn {
+    height: auto;
+    max-height: 0;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+  }
+  .btn_red {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 190px;
+  }
+}
+
+// Main banner
+.main-banner {
+  background-color: $dark-1;
+  position: relative;
+  &__carousel, &_inner__carousel {
+    .slide-image {
+      padding-top: 56.25%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+  }
+  &_inner__carousel {
+    .slide-image {
+      padding-top: 44%;
+    }
+  }
+  &__carousel-slide {
+    width: 100vw;
+  }
+  &__bottom-panel {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: $header-bg-color;
+    color: $white;
+    padding: 15px 0;
+  }
+  // Socials list
+  &__socials {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 50px;
+      font-size: 1.25rem;
+      a {
+        display: block;
+        transition: all .3s ease-in-out;
+        &:hover {
+          color: $red;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  // Contacts
+  &__contacts {
+    list-style: none;
+    li {
+      display: inline-block;
+      & + li {
+        margin-left: 60px;
+      }
+      i {
+        margin-right: 11px;
+        font-size: 1.25rem;
+        position: relative;
+        top: 2px;
+      }
+      a {
+        margin-right: 40px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .arrows-container {
+    width: 100%;
+    top: 50%;
+    left: 0;
+    position: absolute;
+    z-index: 8888;
+  }
+}
+
+// Dots place
+.dots-place {
+  display: inline-block;
+  .slick-dots {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    white-space: nowrap;
+    &:before, &:after {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: 2px solid $white;
+      vertical-align: middle;
+      transform-origin: 50% 50%;
+      transform: rotate(45deg);
+    }
+    &:before {
+      border-top: none;
+      border-right: none;
+    }
+    &:after {
+      border-bottom: none;
+      border-left: none;
+    }
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      height: 20px;
+      width: 14px;
+      position: relative;
+      button {
+        height: 2px;
+        background-color: $white;
+        margin: -1px 0 0 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transition: all .3s ease-in-out;
+        &:before {
+          display: none;
+        }
+      }
+      &:hover, &.slick-active {
+        button {
+          background-color: $red;
+        }
+      }
+    }
+  }
+  &_dark {
+    .slick-dots {
+      &:before, &:after {
+        border-color: $dark-1;
+      }
+      li {
+        button {
+          background-color: $dark-1;
+        }
+      }
+    }
+  }
+  &_wo-arr {
+    .slick-dots {
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+// Content block
+.content-block {
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+// About us
+.about-us {
+  position: relative;
+  &__thumbnail {
+    padding-top: 48.49%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-color: $dark-2;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    &:before {
+      content: '';
+      display: block;
+      height: 0;
+      width: 20px;
+      background-color: $dark-2;
+      position: absolute;
+      top: 20px;
+      left: -20px;
+      transition: all .4s .4s ease-in-out;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 20px;
+      width: 0;
+      background-color: $dark-2;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: all .4s .8s ease-in-out;
+    }
+    &.aos-animate {
+      &:before {
+        height: 100%;
+      }
+      &:after {
+        width: 50%;
+      }
+    }
+  }
+  &__descr {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 7777;
+  }
+}
+
+// Services
+.services {
+  &__photo {
+    padding-top: 39.44%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);    
+  }
+  &__descr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7777;
+  }
+}
+
+// Team
+.team {
+  position: relative;
+  &__carousel_photo {
+    position: relative;
+    top: -2.5rem;
+    &__slide {
+      .photo-block {
+        width: 100%;
+        max-width: 222px;
+        margin: 0 auto;
+        padding-top: 141.89%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        position: relative;
+        cursor: pointer;
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: $dark-1;
+          opacity: .5;
+          transition: all .3s ease-in-out;
+        }
+      }
+      &.slick-current {
+        .photo-block {
+          &:before {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+  &__carousel_detail {
+    .dark-text-block {
+      padding-right: 110px;
+    }
+  }
+  .detail-side {
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    height: auto;
+    left: 0;
+    top: 10px;
+  }
+  .dots-place {
+    margin-left: 25%;
+  }
+}
+
+// Reviews
+.reviews {
+  position: relative;
+  top: -45px;
+  &__slide {
+    position: relative;
+  }
+  &__photo {
+    width: 219px;
+    height: 195px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .dark-text-block {
+    padding-right: 170px;
+  }
+  .carousel-ctrl-btn {
+    top: 50%;
+    &_prev {
+      left: -30px;
+    }
+    &_next {
+      right: -30px;
+    }
+  }
+}
+
+// Contacts
+.contacts {
+  .dark-text-block {
+    position: relative;
+    ul {
+      list-style: none;
+      li {
+        display: block;
+        margin: 20px 0;
+        i {
+          margin-right: 11px;
+          font-size: 1.25rem;
+          position: relative;
+          top: -2px;
+        }
+        a {
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }  
+    }
+  }
+  label {
+    display: block;
+    font-family: $ubuntu-light;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: $white;
+    padding: 0;
+    margin: 0;
+    font-family: $ubuntu-bold;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $white;
+      opacity: 1;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $white;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $white;
+      opacity: 1;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $white;
+      opacity: 1;
+    }
+  }
+  select {
+    display: block;
+    border: none;
+    background-color: transparent;
+    color: $white;
+    font-family: $ubuntu-bold;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: -5px;
+    width: 100%;
+    option {
+      background-color: rgba($dark-1, .9);
+      line-height: 1.5;
+    }
+  }
+}
+
+// Dark text block
+.dark-text-block {
+  background-color: rgba($dark-1, .9);
+  padding: 40px 30px;
+  color: $white;
+  * {
+    color: $white;
+  }
+  .btn {
+    width: 100%;
+    max-width: 247px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.36);
+  }
+  &.red-on-back {
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      width: 80%;
+      max-width: 221px;
+      height: 10px;
+      background-color: $red;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 13px;
+      width: 10px;
+      background-color: $red;
+      position: absolute;
+      top: 0;
+      left: -10px;
+    }
+  }
+}
+
+.link {
+  &_more {
+    display: inline-block;
+    position: relative;
+    padding-right: 30px;
+    margin-left: 15px;
+    transition: all .3s ease-in-out;
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background-color: $red;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: 1px solid $red;
+      transform-origin: 50% 50%;
+      border-bottom: none;
+      border-left: none;
+      transform: translate(0, -50%) rotate(45deg);
+      position: absolute;
+      right: -1px;
+      top: 50%;
+    }
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  transition: all .3s ease-in-out;
+  font-family: $ubuntu-regular;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 11px 0;
+  border-radius: 0;
+  border: none !important;
+  margin: 0;
+  outline: none;
+  &:active, &:focus, &:visited {
+    border: none !important;
+    box-shadow: none;
+  }
+  // Simple red button
+  &_red {
+    background-color: $red;
+    width: 100%;
+    max-width: 247px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.36);
+    color: $white;
+    &:hover {
+      background-color: lighten($red, 5%);
+      color: $white;
+    }
+    i {
+      margin: 0 10px;
+    }
+  }
+  // Burger button
+  &_burger {
+    display: block;
+    width: $brg-width;
+    height: $brg-height;
+    position: relative;
+    padding: 0;
+    span, &:before, &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $white;
+      position: absolute;
+      left: 0;
+      opacity: 1;
+      transition: all .3s ease-in-out;
+      transform-origin: 50% 50%;
+    }
+    span {
+      top: 50%;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      top: 100%;
+      margin-top: -1px;
+    }
+    &.clicked {
+      &:before {
+        top: 50%;
+        transform: rotate(135deg);
+      }
+      span {
+        opacity: 0;
+      }
+      &:after {
+        top: 50%;
+        margin-top: 0;
+        transform: rotate(225deg);
+      }
+    }
+  }
+  // Main carousel buttons
+  &_main-carousel-prev, &_main-carousel-next {
+    display: block;
+    width: 53px;
+    height: 62px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 8888;
+    background-color: $header-bg-color;
+    &:before {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      border: 2px solid $white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform-origin: 50% 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      transition: all .3s ease-in-out;
+    }
+    &:hover {
+      &:before {
+        border-color: $red;
+      }
+    }
+  }
+  &_main-carousel-prev {
+    left: 0;
+    &:before {
+      border-top: none;
+      border-right: none;
+    }
+  }
+  &_main-carousel-next {
+    right: 0;
+    &:before {
+      border-bottom: none;
+      border-left: none;
+    }
+  }
+  // 3D tour button
+  &.btn_3d-tour {
+    width: 100%;
+    max-width: 230px;
+    border: 2px solid $red !important;
+    transition: all .3s ease-in-out;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    &:hover {
+      background-color: $red;
+    }
+  }
+}
+
+// Carousel controls
+.carousel-ctrl-btn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid $dark-1;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -45px;
+  &_prev {
+    border-top: none;
+    border-right: none;
+    left: 15px;
+  }
+  &_next {
+    border-bottom: none;
+    border-left: none;
+    right: 15px;
+  }
+}
+
+// Map
+.map-wrapper {
+  position: relative;
+  padding-top: 30%;
+  #map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Etaps
+.etaps {
+  .dark-text-block {
+    max-width: 90%;
+    padding: 20px 15px;
+    span {
+      margin-right: 20px;
+    }
+  }
+  p {
+    max-width: 90%;
+    padding: 0 15px 15px;
+    margin-bottom: 30px;
+  }
+}
+
+// Prices
+.prices {
+  .dark-text-block {
+    display: inline-block;
+    padding: 20px 15px;
+  }
+}
+
+// Price list
+.price-list {
+  list-style: none;
+  li {
+    display: block;
+    border-top: 1px solid #e4e5e5;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    font-size: 1rem;
+    span {
+      &:first-child {
+        font-family: $ubuntu-light;
+        padding-right: 5px;
+      }
+      &:last-child {
+        font-family: $ubuntu-bold;
+        white-space: nowrap; 
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid $red;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// About gallery
+.carousel__gallery {
+  .gallery__slide {
+    .photo-item {
+      display: block;
+      height: 283px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      margin: 15px 0;
+      position: relative;
+    }
+    .photo-wraper {
+      &:nth-child(1) {
+        .photo-item {
+          &:before {
+            content: '';
+            display: block;
+            width: 90%;
+            max-width: 220px;
+            height: 10px;
+            background-color: #323232;
+            position: absolute;
+            right: 0;
+            top: -10px;
+          }
+        }
+      }
+      &:nth-child(3) {
+        .photo-item {
+          &:before {
+            content: '';
+            display: block;
+            width: 90%;
+            max-width: 220px;
+            height: 10px;
+            background-color: #323232;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+          }
+          &:after {
+            content: '';
+            display: block;
+            height: 90%;
+            max-height: 220px;
+            width: 10px;
+            background-color: #323232;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+          }
+        }
+      }
+      &:nth-child(4) {
+        .photo-item {
+          &:before {
+            content: '';
+            display: block;
+            width: 90%;
+            max-width: 220px;
+            height: 10px;
+            background-color: #323232;
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+          }
+          &:after {
+            content: '';
+            display: block;
+            height: 90%;
+            max-height: 220px;
+            width: 10px;
+            background-color: #323232;
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+          }
+        }
+      }
+      &:nth-child(6) {
+        .photo-item {
+          &:before {
+            content: '';
+            display: block;
+            width: 90%;
+            max-width: 220px;
+            height: 10px;
+            background-color: #323232;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// About 3d tour block
+.tour-3d {
+  display: inline-block;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 90%;
+    max-width: 220px;
+    height: 10px;
+    background-color: #323232;
+    position: absolute;
+    top: -10px;
+    right: 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 90%;
+    max-width: 220px;
+    height: 10px;
+    background-color: #323232;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+}
+
+// Technology
+.technology {
+  position: relative;
+  .text-side {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    height: auto;
+    z-index: 500;
+    .dark-text-block {
+      padding: 25px 30px;
+    }
+  }
+  &_reverse {
+    .text-side {
+      left: auto;
+      right: 0;
+      top: 30px;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Doctors
+.doctor {
+  &__photo {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    z-index: 500;
+  }
+  &__about {
+    position: relative;
+    z-index: 400;
+    &:before {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -30px;
+      background-color: #edeeee;
+    }
+  }
+}
+
+select {
+  display: inline-block;
+  width: 100%;
+  max-width: 240px;
+  border: none;
+  background-color: rgba($dark-1, .9);
+  color: $white;
+  font-family: $ubuntu-bold;
+  padding: 5px 10px;
+  margin: 0;
+  position: relative;
+  left: -5px;
+  width: 100%;
+  option {
+    background-color: rgba($dark-1, .9);
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,64 @@
+// Body, html
+body, html {
+  min-width: 320px;
+  font-family: $ubuntu-regular;
+  font-size: 16px;
+  color: $dark-1;
+}
+
+*, .btn {
+  outline: none !important;
+  outline: 0 !important;
+  &:active, &:focus, &:visited, &:hover {
+    outline: none !important;
+    outline: 0 !important;
+  }
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,p {
+  margin: 0;
+  padding: 0;
+  i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  &:hover {
+    color: currentColor;
+    text-decoration: none;
+  }
+}
+
+h2 {
+  font-family: $ubuntu-bold;
+  font-size: 2.5rem;
+  letter-spacing: .25rem;
+}
+h3 {
+  font-family: $ubuntu-bold;
+  font-size: 1.25rem;
+  i {
+    margin-right: 15px;
+  }
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+// Slick slider
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+// Bootstrap container width for wide screens
+@media screen and (min-width: 1470px) {
+  .container {
+    max-width: 1440px;
+  }
+}

@@ -1,0 +1,44 @@
+<section class="content-block bg-light-blue">
+  <div class="container no-gutter-on-sm">
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-4 mb-lg-2 text-center text-lg-left" data-aos="fade-right">
+          <h2>Послуги</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="services">
+    <div class="services__carousel" data-aos="fade-down">
+      {{#index-services-slides}}
+      <div class="services__slide pb-5">
+        <div class="container no-gutter-on-sm">
+          <div class="row position-relative">
+            <div class="col-12 col-lg-8 offset-lg-4">
+              <div class="services__photo" style="background-image: url(assets/img/{{photo-name}})"></div>
+            </div>
+            <div class="col-12 col-lg-5 pt-0 pt-lg-4 services__descr">
+              <div class="dark-text-block">
+                <h3><i class="icon icon-service"></i> Терапевтична стоматологія</h3>
+                <p>
+                  Ми діагностуємо, проводимо профілактику та лікування захворювань ясен, кореневих каналів, пульп (зубних нервів). Встановлюємо коронки, вініри та мости і звичайно, що пломбуємо зуби. 
+                </p>
+                <div class="text-right mt-4">
+                  <a href="#" class="btn btn_red">Більше інформації</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/index-services-slides}}
+    </div>
+    <div class="container d-none d-sm-block">
+      <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-6 mt-2 text-center text-lg-left">
+          <div class="dots-place dots-place_dark"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

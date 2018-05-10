@@ -1,0 +1,396 @@
+{
+ "home": {
+    "head": {
+      "title": "Home"
+    },
+    "header": {
+      "current-lang": "uk",
+      "language-items": [
+        {
+          "language": "en"
+        },
+        {
+          "language": "fr"
+        },
+        {
+          "language": "it"
+        }
+      ],
+      "main-nav-items": [
+        {
+          "item": "Про клініку"
+        },
+        {
+          "item": "Послуги"
+        },
+        {
+          "item": "Команда"
+        },
+        {
+          "item": "Контакти"
+        }
+      ]
+    },
+    "main-banner": {
+      "slides": [
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        }
+      ]
+    },
+    "index-services-slides": [
+      {
+        "photo-name":"services-slide-photo.jpg"
+      },
+      {
+        "photo-name":"services-slide-photo.jpg"
+      },
+      {
+        "photo-name":"services-slide-photo.jpg"
+      },
+      {
+        "photo-name":"services-slide-photo.jpg"
+      },
+      {
+        "photo-name":"services-slide-photo.jpg"
+      }
+    ],
+    "team-photo-carousel-slides": [
+      {
+        "photo-name": "doctor-1.jpg"
+      },
+      {
+        "photo-name": "doctor-2.jpg"
+      },
+      {
+        "photo-name": "doctor-3.jpg"
+      },
+      {
+        "photo-name": "doctor-4.jpg"
+      },      
+      {
+        "photo-name": "doctor-1.jpg"
+      },
+      {
+        "photo-name": "doctor-2.jpg"
+      },
+      {
+        "photo-name": "doctor-3.jpg"
+      },
+      {
+        "photo-name": "doctor-4.jpg"
+      }      
+    ],
+    "team-carousel-detail-slides": [
+      {"number": "1"},{"number": "2"},{"number": "3"},{"number": "4"},{"number": "5"},{"number": "6"},{"number": "7"},{"number": "8"}
+    ],
+    "reviews-slides": [
+      {},{},{},{}
+    ],
+    "footer": {
+
+    },
+    "foot": {
+      "vendor-scripts": {
+        "jquery": true,
+        "slick-slider": true,
+        "aos": true,
+        "map": true
+      }   
+    }
+  },
+  "services": {
+    "head": {
+      "title": "Services"
+    },
+    "header": {
+      "current-lang": "uk",
+      "language-items": [
+        {
+          "language": "en"
+        },
+        {
+          "language": "fr"
+        },
+        {
+          "language": "it"
+        }
+      ],
+      "main-nav-items": [
+        {
+          "item": "Про клініку"
+        },
+        {
+          "item": "Послуги"
+        },
+        {
+          "item": "Команда"
+        },
+        {
+          "item": "Контакти"
+        }
+      ]
+    },
+    "main-banner": {
+      "slides": [
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        }
+      ]
+    },
+    "team-photo-carousel-slides": [
+      {
+        "photo-name": "doctor-1.jpg"
+      },
+      {
+        "photo-name": "doctor-2.jpg"
+      },
+      {
+        "photo-name": "doctor-3.jpg"
+      },
+      {
+        "photo-name": "doctor-4.jpg"
+      },      
+      {
+        "photo-name": "doctor-1.jpg"
+      },
+      {
+        "photo-name": "doctor-2.jpg"
+      },
+      {
+        "photo-name": "doctor-3.jpg"
+      },
+      {
+        "photo-name": "doctor-4.jpg"
+      }      
+    ],
+    "team-carousel-detail-slides": [
+      {"number": "1"},{"number": "2"},{"number": "3"},{"number": "4"},{"number": "5"},{"number": "6"},{"number": "7"},{"number": "8"}
+    ],
+    "footer": {
+
+    },
+    "foot": {
+      "vendor-scripts": {
+        "jquery": true,
+        "slick-slider": true,
+        "aos": true,
+        "map": true
+      }   
+    }
+  },
+  "about": {
+    "head": {
+      "title": "About"
+    },
+    "header": {
+      "current-lang": "uk",
+      "language-items": [
+        {
+          "language": "en"
+        },
+        {
+          "language": "fr"
+        },
+        {
+          "language": "it"
+        }
+      ],
+      "main-nav-items": [
+        {
+          "item": "Про клініку"
+        },
+        {
+          "item": "Послуги"
+        },
+        {
+          "item": "Команда"
+        },
+        {
+          "item": "Контакти"
+        }
+      ]
+    },
+    "main-banner": {
+      "slides": [
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        }
+      ]
+    },
+    "reviews-slides": [
+      {},{},{},{}
+    ],
+    "about-gallery-slides": [
+      {},{},{},{}
+    ],
+    "footer": {
+
+    },
+    "foot": {
+      "vendor-scripts": {
+        "jquery": true,
+        "slick-slider": true,
+        "aos": true,
+        "map": true
+      }   
+    }
+  },
+  "doctors": {
+    "head": {
+      "title": "Doctors"
+    },
+    "header": {
+      "current-lang": "uk",
+      "language-items": [
+        {
+          "language": "en"
+        },
+        {
+          "language": "fr"
+        },
+        {
+          "language": "it"
+        }
+      ],
+      "main-nav-items": [
+        {
+          "item": "Про клініку"
+        },
+        {
+          "item": "Послуги"
+        },
+        {
+          "item": "Команда"
+        },
+        {
+          "item": "Контакти"
+        }
+      ]
+    },
+    "main-banner": {
+      "slides": [
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        }
+      ]
+    },
+    "doctor-items": [
+      {
+        "doc-photo-name": "doc-1.jpg"
+      },
+      {
+        "doc-photo-name": "doc-2.jpg"
+      },
+      {
+        "doc-photo-name": "doc-3.jpg"
+      },
+      {
+        "doc-photo-name": "doc-4.jpg"
+      }
+    ],
+    "footer": {
+
+    },
+    "foot": {
+      "vendor-scripts": {
+        "jquery": true,
+        "slick-slider": true,
+        "aos": true,
+        "map": true
+      }   
+    }
+  },
+  "registered": {
+    "head": {
+      "title": "Registered"
+    },
+    "header": {
+      "current-lang": "uk",
+      "language-items": [
+        {
+          "language": "en"
+        },
+        {
+          "language": "fr"
+        },
+        {
+          "language": "it"
+        }
+      ],
+      "main-nav-items": [
+        {
+          "item": "Про клініку"
+        },
+        {
+          "item": "Послуги"
+        },
+        {
+          "item": "Команда"
+        },
+        {
+          "item": "Контакти"
+        }
+      ]
+    },
+    "footer": {
+
+    },
+    "foot": {
+      "vendor-scripts": {
+        "jquery": true,
+        "slick-slider": true,
+        "aos": true,
+        "map": true
+      }   
+    }
+  }
+}

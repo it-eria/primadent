@@ -1,0 +1,175 @@
+{{#foot}}
+  {{#vendor-scripts}}
+    {{#jquery}}
+      <!-- Jquery -->
+      <script src="assets/js/vendors/jquery-3.3.1.js"></script>
+    {{/jquery}}
+    {{#slick-slider}}
+      <!-- Slick slider -->
+      <script src="assets/js/vendors/slick.min.js"></script>
+    {{/slick-slider}}
+    {{#aos}}
+      <!-- Animate on scroll -->
+      <script src="assets/js/vendors/aos.js"></script>
+    {{/aos}}
+    {{#map}}
+      <!-- Map -->
+      <script>
+        function initMap() {
+          var coords = {lat: 49.812813, lng: 24.000806};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: coords
+          });
+          var marker = new google.maps.Marker({
+            position: coords,
+            map: map,
+            icon: "assets/img/marker.png"
+          });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoLs4jh4_7ZW16LDVDAXDPGISWv9RN-x8&callback=initMap"
+      async defer></script>
+    {{/map}}
+    {{/vendor-scripts}}
+      <!-- Custom script -->
+      <script src="assets/js/script.min.js"></script>
+      <!-- Carousels -->
+      <script>
+        var mainBannerCarousel = $('.main-banner__carousel').length;
+        var mainBannerCarouselInner = $('.main-banner_inner__carousel').length;
+        var servicesCarousel = $('.services__carousel').length;
+        var teamDoctorsCarousel = $('.team__carousel_photo').length;
+        var reviewCarousel = $('.reviews__carousel').length;
+        var aboutGallery = $('.carousel__gallery').length;
+        if(mainBannerCarousel > 0) {
+          $('.main-banner__carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplatSpeed: 4000,
+            variableWidth: true,
+            centerMode: true,
+            prevArrow: $('.btn_main-carousel-prev'),
+            nextArrow: $('.btn_main-carousel-next'),
+            dots: true,
+            appendDots: $('.main-banner .dots-place'),
+            responsive: [
+              {
+                breakpoint: 576,
+                settings: {
+                  arrows: false,
+                  dots: false
+                }
+              }
+            ]
+          });
+        }
+
+        if(mainBannerCarouselInner > 0) {
+          $('.main-banner_inner__carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplatSpeed: 4000,
+            arrows: false,
+            dots: true,
+            appendDots: $('.main-banner .dots-place')
+          });
+        }
+
+        if(servicesCarousel > 0) {
+          $('.services__carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplatSpeed: 4000,
+            arrows: false,
+            dots: true,
+            appendDots: $('.services .dots-place'),
+            responsive: [
+              {
+                breakpoint: 576,
+                settings: {
+                  dots: false,
+                  arrows: true,
+                  prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                  nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">'
+                }
+              }
+            ]
+          });
+        }
+
+        if(teamDoctorsCarousel > 0) {
+          $('.team__carousel_photo').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: true,
+            appendDots: $('.team .dots-place'),
+            focusOnSelect: true,
+            arrows: false,
+            asNavFor: '.team__carousel_detail',
+            responsive: [
+              {
+                breakpoint: 576,
+                settings: {
+                  slidesToShow: 1,
+                  dots: false,
+                  arrows: true,
+                  prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                  nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">'
+                }
+              },
+              {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 1
+                }
+              }
+            ]
+          });
+          $('.team__carousel_detail').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false,
+            fade: true,
+            cssEase: 'linear',
+            draggable: false
+          });
+        }
+
+        if(reviewCarousel > 0) {
+          $('.reviews__carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            appendDots: $('.reviews .dots-place'),
+            arrows: true,
+            prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+            nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
+            responsive: [
+              {
+                breakpoint: 991,
+                settings: {
+                  dots: false
+                }
+              }
+            ]
+          });
+        }
+
+        if(aboutGallery > 0) {
+          $('.carousel__gallery').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            appendDots: $('.about-gallery .dots-place')
+          });
+        }
+      </script>
+    </body>
+  </html>
+{{/foot}}

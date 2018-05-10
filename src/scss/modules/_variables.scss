@@ -1,0 +1,138 @@
+// Fonts variables
+// Regular
+$ubuntu-light: "Ubuntu Light", Helvetica, sans-serif;
+$ubuntu-regular: "Ubuntu Regular", Helvetica, sans-serif;
+$ubuntu-bold: "Ubuntu Bold", Helvetica, sans-serif;
+
+// Colors
+$dark-1: #1e1e1e;
+$dark-2: #1f2123;
+$white: #fff;
+$red: #dc3449;
+$header-bg-color: rgba($dark-1, .9);
+
+// Burger button
+$brg-width: 30px;
+$brg-height: 18px;
+
+// Helper classes
+// Fonts
+.f-bold, b, strong {
+  font-family: $ubuntu-bold;
+  font-weight: normal;
+}
+.f-regular {
+  font-family: $ubuntu-regular;
+}
+.f-light {
+  font-family: $ubuntu-light;
+}
+
+// Background colors
+.bg-light-blue {
+  background-color: #edeeee;
+}
+
+// Iconmoon
+$icon-insta-outline: \e900;
+$icon-facebook-outline: \e901;
+$icon-facebook-solid: \e902;
+$icon-insta-solid: \e903;
+$icon-mail-solid: \e904;
+$icon-phone: \e905;
+$icon-target-solid: \e906;
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.icon-insta-outline {
+  &:before {
+    content: unicode($icon-insta-outline); 
+  }
+}
+.icon-facebook-outline {
+  &:before {
+    content: unicode($icon-facebook-outline); 
+  }
+}
+.icon-facebook-solid {
+  &:before {
+    content: unicode($icon-facebook-solid); 
+  }
+}
+.icon-insta-solid {
+  &:before {
+    content: unicode($icon-insta-solid); 
+  }
+}
+.icon-mail-solid {
+  &:before {
+    content: unicode($icon-mail-solid); 
+  }
+}
+.icon-phone {
+  &:before {
+    content: unicode($icon-phone); 
+  }
+}
+.icon-target-solid {
+  &:before {
+    content: unicode($icon-target-solid); 
+  }
+}
+
+.icon-phone-outline {
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 12px;
+    height: 22px;
+    background-image: url(../img/phone-outline.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+}
+
+.icon-service {
+  &:before {
+    content: '';
+    display: block;
+    width: 47px;
+    height: 43px;
+    background-image: url(../img/service-icon.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+}
+
+.icon-down-arr {
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid currentColor;
+    border-top: none;
+    border-left: none;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg) translateY(-2px);
+  }
+}

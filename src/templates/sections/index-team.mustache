@@ -1,0 +1,46 @@
+<section class="content-block">
+  <div class="container no-gutter-on-sm">
+    <div class="row">
+      <div class="col-12 mb-4 mb-lg-2 text-center text-lg-left" data-aos="fade-right">
+        <h2>Команда</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row team">
+      <div class="col-12 col-lg-6 col-xl-5 order-2 order-lg-1 detail-side" data-aos="fade-down">
+        <div class="team__carousel_detail">
+          {{#team-carousel-detail-slides}}
+          <div class="team__carousel_detail__slide">
+            <div class="dark-text-block">
+              <h3>Воронін Максим Валерійович {{number}}</h3>
+              <p>
+                Я вирішив стати стоматологом не випливаючи чужому прикладу, а усвідомлено зробивши вибір, заснований на моїх особистих відчуттях. У цій сфері бачив більше можливостей для самореалізації та сталого розвитку. Думав ще стати юристом. Я не люблю робити одну і ту ж роботу з дня в день, стояти на місці. Мені подобається застосовувати свої знання і вміння на практиці. Я не люблю робити одну і ту ж роботу день...
+              </p>
+              <div class="text-right mt-2">
+                <a href="#" class="link link_more">Дізнатись більше</a>
+              </div>
+              <div class="text-right mt-4">
+                <a href="#" class="btn btn_red">Записатись на прийом</a>
+              </div>
+            </div>
+          </div>
+          {{/team-carousel-detail-slides}}
+        </div>
+      </div>
+      <div class="col-12 col-lg-7 col-xl-8 offset-lg-5 offset-xl-4 order-1 order-lg-2" data-aos="fade-down" data-aos-delay="300">
+        <div class="team__carousel_photo">
+          {{#team-photo-carousel-slides}}
+          <div class="team__carousel_photo__slide pl-1 pr-1">
+            <div class="photo-block" style="background-image: url(assets/img/{{photo-name}})"></div>
+          </div>
+          {{/team-photo-carousel-slides}}
+        </div>
+        <div class="dots-place dots-place_dark mt-2 d-none d-lg-block"></div>
+      </div>
+      <div class="col-12 d-block d-lg-none order-3 text-center">
+        <div class="dots-place dots-place_dark mt-0 ml-0"></div>
+      </div>
+    </div>
+  </div>
+</section>
