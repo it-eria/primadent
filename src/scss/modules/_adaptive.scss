@@ -276,6 +276,27 @@
         display: none;
       }
     }
+    &__photo {
+      max-width: 90%;
+      & + div {
+        flex-direction: column;
+        text-align: center;
+      }
+      & + div a {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .doctors-filter {
+    position: relative;
+  }
+
+  .modal-content {
+    .close {
+      right: 5px;
+      top: 5px;
+    }
   }
 }
 

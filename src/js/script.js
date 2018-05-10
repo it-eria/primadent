@@ -1,6 +1,7 @@
 $(function() {
   var resizeDoneTimer;
   var windowWidth = $(window).innerWidth();
+  var docDescr = [];
 
   function putLogoItemToNav() {
     var logoItem = '<li style="max-width: 0; opacity: 0; top: 0;" class="logo-item d-none d-lg-inline-block"><a href="https://'+window.location.hostname+'/"><img src="assets/img/logo.png" alt="logo"></a></li>';

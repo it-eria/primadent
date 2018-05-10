@@ -62,3 +62,68 @@ p {
     max-width: 1440px;
   }
 }
+
+.pickmeup {
+  background: rgb(50, 50, 50);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  .pmu-instance {
+    height: 15em;
+  }
+  .pmu-button.pmu-month, .pmu-day-of-week div {
+    font-family: $ubuntu-regular;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    margin: 0;
+  }
+  .pmu-button.pmu-prev, .pmu-button.pmu-next {
+    background-color: transparent;
+  }
+  .pmu-button.pmu-not-in-month {
+    opacity: 0;
+  }
+  .pmu-button {
+    font-family: $ubuntu-regular;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2a2c2f;
+    border: 1px solid rgb(50, 50, 50);
+  }
+}
+
+
+.z-top {
+  z-index: 1040;
+}
+
+.modal-dialog {
+  max-width: 100% !important;
+  .doctor {
+    background-color: #fff;
+  }
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+  .close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    span {
+      display: block;
+      position: relative;
+    }
+  }
+}

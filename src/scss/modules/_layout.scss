@@ -201,7 +201,7 @@
         margin-right: 11px;
         font-size: 1.25rem;
         position: relative;
-        top: 2px;
+        top: -2px;
       }
       a {
         margin-right: 40px;
@@ -528,6 +528,7 @@
     position: relative;
     left: -5px;
     width: 100%;
+    max-width: 100%;
     option {
       background-color: rgba($dark-1, .9);
       line-height: 1.5;
@@ -740,6 +741,25 @@
     line-height: 1.25rem;
     &:hover {
       background-color: $red;
+    }
+  }
+  &-month {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #fff;
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+    &_prev {
+      border-top: none;
+      border-right: none;
+      left: 10px;
+    }
+    &_next {
+      border-bottom: none;
+      border-left: none;
+      right: 10px;
     }
   }
 }
@@ -1008,6 +1028,9 @@
   &__about {
     position: relative;
     z-index: 400;
+    h2, p {
+      cursor: pointer;
+    }
     &:before {
       content: '';
       display: block;
@@ -1021,10 +1044,27 @@
   }
 }
 
+.doctors-filter {
+  position: absolute;
+}
+
+// Registered
+.registered-block {
+  min-height: calc(100vh - 76px);
+}
+
+// Footer
+.footer {
+  position: relative;
+  .main-banner__bottom-panel {
+    position: relative;
+  }
+}
+
 select {
   display: inline-block;
   width: 100%;
-  max-width: 240px;
+  max-width: 280px;
   border: none;
   background-color: rgba($dark-1, .9);
   color: $white;

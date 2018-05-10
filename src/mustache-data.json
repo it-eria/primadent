@@ -107,6 +107,7 @@
         "jquery": true,
         "slick-slider": true,
         "aos": true,
+        "datepicker": true,
         "map": true
       }   
     }
@@ -146,13 +147,13 @@
     "main-banner": {
       "slides": [
         {
-          "slide-name": "main-carousel-slide-1.jpg"
+          "slide-name": "main-carousel-slide-2.jpg"
         },
         {
           "slide-name": "main-carousel-slide-1.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-1.jpg"
+          "slide-name": "main-carousel-slide-2.jpg"
         },
         {
           "slide-name": "main-carousel-slide-1.jpg"
@@ -199,6 +200,7 @@
         "jquery": true,
         "slick-slider": true,
         "aos": true,
+        "datepicker": true,
         "map": true
       }   
     }
@@ -268,6 +270,7 @@
         "jquery": true,
         "slick-slider": true,
         "aos": true,
+        "datepicker": true,
         "map": true
       }   
     }
@@ -325,16 +328,20 @@
     },
     "doctor-items": [
       {
-        "doc-photo-name": "doc-1.jpg"
+        "doc-photo-name": "doc-1.jpg",
+        "modal-number": "modal-1"
       },
       {
-        "doc-photo-name": "doc-2.jpg"
+        "doc-photo-name": "doc-2.jpg",
+        "modal-number": "modal-2"
       },
       {
-        "doc-photo-name": "doc-3.jpg"
+        "doc-photo-name": "doc-3.jpg",
+        "modal-number": "modal-3"
       },
       {
-        "doc-photo-name": "doc-4.jpg"
+        "doc-photo-name": "doc-4.jpg",
+        "modal-number": "modal-4"
       }
     ],
     "footer": {
@@ -345,6 +352,7 @@
         "jquery": true,
         "slick-slider": true,
         "aos": true,
+        "datepicker": true,
         "map": true
       }   
     }
@@ -389,6 +397,7 @@
         "jquery": true,
         "slick-slider": true,
         "aos": true,
+        "datepicker": true,
         "map": true
       }   
     }

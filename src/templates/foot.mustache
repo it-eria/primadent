@@ -12,6 +12,10 @@
       <!-- Animate on scroll -->
       <script src="assets/js/vendors/aos.js"></script>
     {{/aos}}
+    {{#datepicker}}
+      <!-- Datepicker -->
+      <script src="assets/js/vendors/pickmeup.js"></script>
+    {{/datepicker}}
     {{#map}}
       <!-- Map -->
       <script>
@@ -32,6 +36,7 @@
       async defer></script>
     {{/map}}
     {{/vendor-scripts}}
+      <script src="assets/js/vendors/bootstrap.js"></script>
       <!-- Custom script -->
       <script src="assets/js/script.min.js"></script>
       <!-- Carousels -->
@@ -169,6 +174,30 @@
             appendDots: $('.about-gallery .dots-place')
           });
         }
+      </script>
+      <!-- Datepicker -->
+      <script>
+        pickmeup.defaults.locales['ru'] = {
+          days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+          daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+          daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+          months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+          monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+        };
+        pickmeup.defaults.locales['ua'] = {
+          days: ['Неділя', 'Плнеділок', 'Вівторок', 'Середа', 'Четвер', 'П\'ятниця', 'Субота'],
+          daysShort: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+          daysMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+          months: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
+          monthsShort: ['Січ', 'Лют', 'Бер', 'Кві', 'Тра', 'Чер', 'Лип', 'Сер', 'Вер', 'Жов', 'Лис', 'Гру']
+        };
+        pickmeup('#date', {
+          format	: 'd.m.Y',
+          title_format: 'B',
+          prev: '<a class="btn-month btn-month_prev"></a>',
+          next: '<a class="btn-month btn-month_next"></a>',
+          locale: 'ua'
+        });
       </script>
     </body>
   </html>
