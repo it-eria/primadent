@@ -153,6 +153,14 @@
       background-position: 50% 50%;
       background-size: cover;
     }
+    .slide-descr {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      z-index: 7777;
+      transform: translate(0, -50%);
+    }
   }
   &_inner__carousel {
     .slide-image {
@@ -571,6 +579,11 @@
       position: absolute;
       top: 0;
       left: -10px;
+    }
+  }
+  &.our-doctors {
+    h3 {
+      font-size: 2.5rem;
     }
   }
 }

@@ -182,6 +182,16 @@
         }
       }
     }
+    &__carousel, &_inner__carousel {
+      .slide-descr {
+        position: relative;
+        top: 0;
+        transform: none;
+      }
+    }
+    &__bottom-panel {
+      position: relative;
+    }
   }
   .content-block {
     padding: 25px 0;
@@ -291,7 +301,6 @@
   .doctors-filter {
     position: relative;
   }
-
   .modal-content {
     .close {
       right: 5px;
