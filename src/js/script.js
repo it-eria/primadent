@@ -3,17 +3,17 @@ $(function() {
   var windowWidth = $(window).innerWidth();
   var docDescr = [];
 
-  function putLogoItemToNav() {
-    var logoItem = '<li style="max-width: 0; opacity: 0; top: 0;" class="logo-item d-none d-lg-inline-block"><a href="https://'+window.location.hostname+'/"><img src="assets/img/logo.png" alt="logo"></a></li>';
-    var insertAfterObj = $('.header__main-nav ul li').eq($('.header__main-nav ul li').length / 2 - 1);
-    $(logoItem).insertAfter(insertAfterObj);
-    setInterval(function() {
-      $('.header__main-nav ul .logo-item').css({
-        'max-width': '100vw',
-        'opacity': '1'
-      });
-    }, 300);
-  }
+  // function putLogoItemToNav() {
+  //   var logoItem = '<li style="max-width: 0; opacity: 0; top: 0;" class="logo-item d-none d-lg-inline-block"><a href="https://'+window.location.hostname+'/"><img src="assets/img/logo.png" alt="logo"></a></li>';
+  //   var insertAfterObj = $('.header__main-nav ul li').eq($('.header__main-nav ul li').length / 2 - 1);
+  //   $(logoItem).insertAfter(insertAfterObj);
+  //   setInterval(function() {
+  //     $('.header__main-nav ul .logo-item').css({
+  //       'max-width': '100vw',
+  //       'opacity': '1'
+  //     });
+  //   }, 300);
+  // }
 
   function teamRowHeight() {
     if(windowWidth > 991) {
@@ -23,13 +23,20 @@ $(function() {
     }
   }
 
-  putLogoItemToNav();
+  // putLogoItemToNav();
   teamRowHeight();
 
   $('.btn_burger').on('click', function(e) {
     e.preventDefault();
     $(this).toggleClass('clicked');
     $('.header__main-nav, .header__languages, .mob-register-btn').toggleClass('uncollapsed');
+  });
+
+  $('#doctors-filter').on('change', function() {
+    var val = $(this).val();
+    console.log(val);
+    $('.team__carousel_photo').slick('slickFilter', '.team__carousel_photo__slide');    
+    $('.team__carousel_photo').slick('slickFilter', '.team__carousel_photo__slide[data-cat="'+val+'"]');
   });
 
   $(window).on('resize', function(e) {

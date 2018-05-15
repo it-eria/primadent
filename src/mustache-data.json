@@ -18,6 +18,10 @@
       ],
       "main-nav-items": [
         {
+          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">",
+          "class": "logo-item"
+        },
+        {
           "item": "Про клініку"
         },
         {
@@ -37,10 +41,10 @@
           "slide-name": "main-carousel-slide-1.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-1.jpg"
+          "slide-name": "main-carousel-slide-2.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-1.jpg"
+          "slide-name": "main-carousel-slide-3.jpg"
         },
         {
           "slide-name": "main-carousel-slide-1.jpg"
@@ -67,6 +71,114 @@
         "photo-name":"services-slide-photo.jpg"
       }
     ],
+    "team-photo-carousel-slides": [
+      {
+        "photo-name": "doctor-1.jpg",
+        "category": "cat-1"
+      },
+      {
+        "photo-name": "doctor-2.jpg",
+        "category": "cat-2"
+      },
+      {
+        "photo-name": "doctor-3.jpg",
+        "category": "cat-3"
+      },
+      {
+        "photo-name": "doctor-4.jpg",
+        "category": "cat-4"
+      },      
+      {
+        "photo-name": "doctor-1.jpg",
+        "category": "cat-1"
+      },
+      {
+        "photo-name": "doctor-2.jpg",
+        "category": "cat-2"
+      },
+      {
+        "photo-name": "doctor-3.jpg",
+        "category": "cat-3"
+      },
+      {
+        "photo-name": "doctor-4.jpg",
+        "category": "cat-4"
+      }      
+    ],
+    "team-carousel-detail-slides": [
+      {"number": "1"},{"number": "2"},{"number": "3"},{"number": "4"},{"number": "5"},{"number": "6"},{"number": "7"},{"number": "8"}
+    ],
+    "reviews-slides": [
+      {},{},{},{}
+    ],
+    "footer": {
+
+    },
+    "foot": {
+      "vendor-scripts": {
+        "jquery": true,
+        "slick-slider": true,
+        "aos": true,
+        "datepicker": true,
+        "map": true
+      }   
+    }
+  },
+  "services": {
+    "head": {
+      "title": "Services"
+    },
+    "header": {
+      "current-lang": "uk",
+      "language-items": [
+        {
+          "language": "en"
+        },
+        {
+          "language": "fr"
+        },
+        {
+          "language": "it"
+        }
+      ],
+      "main-nav-items": [
+        {
+          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">"
+        },
+        {
+          "item": "Про клініку"
+        },
+        {
+          "item": "Послуги",
+          "class": "current"
+        },
+        {
+          "item": "Команда"
+        },
+        {
+          "item": "Контакти"
+        }
+      ]
+    },
+    "main-banner": {
+      "slides": [
+        {
+          "slide-name": "main-carousel-slide-2.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-2.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        },
+        {
+          "slide-name": "main-carousel-slide-1.jpg"
+        }
+      ]
+    },
     "team-photo-carousel-slides": [
       {
         "photo-name": "doctor-1.jpg"
@@ -112,99 +224,6 @@
       }   
     }
   },
-  "services": {
-    "head": {
-      "title": "Services"
-    },
-    "header": {
-      "current-lang": "uk",
-      "language-items": [
-        {
-          "language": "en"
-        },
-        {
-          "language": "fr"
-        },
-        {
-          "language": "it"
-        }
-      ],
-      "main-nav-items": [
-        {
-          "item": "Про клініку"
-        },
-        {
-          "item": "Послуги"
-        },
-        {
-          "item": "Команда"
-        },
-        {
-          "item": "Контакти"
-        }
-      ]
-    },
-    "main-banner": {
-      "slides": [
-        {
-          "slide-name": "main-carousel-slide-2.jpg"
-        },
-        {
-          "slide-name": "main-carousel-slide-1.jpg"
-        },
-        {
-          "slide-name": "main-carousel-slide-2.jpg"
-        },
-        {
-          "slide-name": "main-carousel-slide-1.jpg"
-        },
-        {
-          "slide-name": "main-carousel-slide-1.jpg"
-        }
-      ]
-    },
-    "team-photo-carousel-slides": [
-      {
-        "photo-name": "doctor-1.jpg"
-      },
-      {
-        "photo-name": "doctor-2.jpg"
-      },
-      {
-        "photo-name": "doctor-3.jpg"
-      },
-      {
-        "photo-name": "doctor-4.jpg"
-      },      
-      {
-        "photo-name": "doctor-1.jpg"
-      },
-      {
-        "photo-name": "doctor-2.jpg"
-      },
-      {
-        "photo-name": "doctor-3.jpg"
-      },
-      {
-        "photo-name": "doctor-4.jpg"
-      }      
-    ],
-    "team-carousel-detail-slides": [
-      {"number": "1"},{"number": "2"},{"number": "3"},{"number": "4"},{"number": "5"},{"number": "6"},{"number": "7"},{"number": "8"}
-    ],
-    "footer": {
-
-    },
-    "foot": {
-      "vendor-scripts": {
-        "jquery": true,
-        "slick-slider": true,
-        "aos": true,
-        "datepicker": true,
-        "map": true
-      }   
-    }
-  },
   "about": {
     "head": {
       "title": "About"
@@ -224,7 +243,11 @@
       ],
       "main-nav-items": [
         {
-          "item": "Про клініку"
+          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">"
+        },
+        {
+          "item": "Про клініку",
+          "class": "current"
         },
         {
           "item": "Послуги"
@@ -319,13 +342,17 @@
       ],
       "main-nav-items": [
         {
+          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">"
+        },
+        {
           "item": "Про клініку"
         },
         {
           "item": "Послуги"
         },
         {
-          "item": "Команда"
+          "item": "Команда",
+          "class": "current"
         },
         {
           "item": "Контакти"
@@ -399,6 +426,9 @@
         "modal-number": "modal-4"
       }
     ],
+    "reviews-slides": [
+      {},{},{},{}
+    ],
     "footer": {
 
     },
@@ -417,6 +447,7 @@
       "title": "Registered"
     },
     "header": {
+      "header-class": "position-relative",
       "current-lang": "uk",
       "language-items": [
         {
@@ -430,6 +461,9 @@
         }
       ],
       "main-nav-items": [
+        {
+          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">"
+        },
         {
           "item": "Про клініку"
         },
@@ -453,7 +487,7 @@
         "slick-slider": true,
         "aos": true,
         "datepicker": true,
-        "map": true
+        "map": false
       }   
     }
   }

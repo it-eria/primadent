@@ -79,28 +79,39 @@
         transition: all 1s ease-in-out;
         overflow: hidden;
         position: relative;
-        top: -2px;
+        top: 0;
         &:last-child {
           margin-right: 0;
-        }
-        a {
-          transition: color .3s ease-in-out;
-          &:hover {
-            color: $red;
-          }
         }
         img {
           display: block;
           max-width: 100%;
           height: auto;
         }
-      }
-      .logo-item {
         padding-bottom: 10px;
         &:after {
           content: '';
           display: block;
-          width: 101px;
+          width: 0;
+          height: 2px;
+          background-color: $red;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: all .3s ease-in-out;
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+      .logo-item, .current {
+        padding-bottom: 10px;
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
           height: 2px;
           background-color: $red;
           position: absolute;
@@ -108,6 +119,9 @@
           left: 50%;
           transform: translate(-50%, 0);
         }
+      }
+      .logo-item {
+        top: -3px;
       }
     }
   }
@@ -135,10 +149,32 @@
     overflow: hidden;
   }
   .btn_red {
-    display: block;
+    display: inline-block;
     margin: 0 auto;
-    width: 100%;
-    max-width: 190px;
+    width: auto;
+    font-size: 1.25rem;
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+    padding-bottom: 15px;
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: $red;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all .3s ease-in-out;
+    }
+    &:hover {
+      background-color: transparent;
+      box-shadow: none;
+      &:after {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -542,6 +578,34 @@
       line-height: 1.5;
     }
   }
+  textarea {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,.5);
+    color: $white;
+    padding: 5px;
+    margin: 0;
+    font-family: $ubuntu-bold;
+    resize: vertical;
+    min-height: 5rem;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $white;
+      opacity: 1;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $white;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $white;
+      opacity: 1;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $white;
+      opacity: 1;
+    }
+  }
 }
 
 // Dark text block
@@ -748,7 +812,7 @@
   &.btn_3d-tour {
     width: 100%;
     max-width: 230px;
-    border: 2px solid $red !important;
+    // border: 2px solid $red !important;
     transition: all .3s ease-in-out;
     font-size: 1.25rem;
     line-height: 1.25rem;
@@ -1043,6 +1107,10 @@
     z-index: 400;
     h2, p {
       cursor: pointer;
+      b, span {
+        display: inline-block;
+        vertical-align: top;
+      }
     }
     &:before {
       content: '';
@@ -1064,6 +1132,13 @@
 // Registered
 .registered-block {
   min-height: calc(100vh - 76px);
+}
+
+// Doctors filter
+.team #doctors-filter {
+  float: right;
+  position: relative;
+  top: -25px;
 }
 
 // Footer
