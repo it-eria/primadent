@@ -26,6 +26,26 @@ $(function() {
   // putLogoItemToNav();
   teamRowHeight();
 
+  $('.review-form input[type=file]').on('change', function(e) {
+    var filename = e.target.files[0].name;
+    $('label[for="photo"] span').text(filename);
+    if (e.target.files && e.target.files[0]) {
+      var reader = new FileReader();
+  
+      reader.onload = function(e) {
+        $('.photo-preview').attr('src', e.target.result);
+        $('.photo-preview').fadeIn(300);
+      }
+  
+      reader.readAsDataURL(e.target.files[0]);
+    }
+  });
+
+  $('.reviews .btn_red').on('click', function(e) {
+    e.preventDefault();
+    $('.review-form-wrapper').fadeToggle(300);
+  });
+
   $('.btn_burger').on('click', function(e) {
     e.preventDefault();
     $(this).toggleClass('clicked');

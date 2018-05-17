@@ -61,7 +61,7 @@
                                 <a href="#">Послуги</a>
                             </li>
                             <li>
-                                <a href="#">Команда</a>
+                                <a href="#">Персонал</a>
                             </li>
                             <li>
                                 <a href="#">Контакти</a>
@@ -287,7 +287,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="mb-4 mb-lg-2 text-center text-lg-left" data-aos="fade-right">
-                        <h2>Про клініку Prima Dent</h2>
+                        <h2>Про клініку <img src="assets/img/logo-dark.png" alt="prima dent" class="logo-in-heading">
+                            <!--Prima Dent-->
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -494,7 +496,7 @@
                         <h3>Міжнародні стандарти безпека</h3>
                         <p>
                             Ми дотримуємось міжнародних стандартів стерилізації та зберігання всього стоматологічного інструментарію. У нашій клініці новітні, німецькі стерилізаційні камери “MELAG” та пакувальні машини “MELAG”, які одразу після стерилізації загортають інструменти
-                            у спеціальні герметичні упаковки. Це забезпечує найвищий рівень захисту для наших лікарів та клієнтів.
+                            у спеціальні герметичні упаковки. Це забезпечує найвищий рівень захисту для наших лікарів та пацієнтів.
                         </p>
                     </div>
                 </div>
@@ -510,9 +512,9 @@
     <section class="content-block">
         <div class="container no-gutter-on-sm">
             <div class="row justify-content-center">
-                <div class="col-12 col-lg-8 col-xl-6">
+                <div class="col-12 col-lg-9 col-xl-7">
                     <div class="mb-4 mb-lg-2 pl-2 text-center text-lg-left" data-aos="fade-right">
-                        <h2>Відгуки клієнтів</h2>
+                        <h2>Відгуки пацієнтів</h2>
                     </div>
                 </div>
             </div>
@@ -520,7 +522,7 @@
         <div class="reviews">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-12 col-lg-8 col-xl-6 mt-lg-1">
+                    <div class="col-12 col-lg-9 col-xl-7 mt-lg-1">
                         <div class="reviews__carousel" data-aos="fade-up">
                             <div class="reviews__slide pt-lg-5 pr-lg-5">
                                 <div class="reviews__photo mb-1" style="background-image: url(assets/img/review-1.jpg)"></div>
@@ -779,7 +781,9 @@
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplatSpeed: 4000,
-                arrows: false,
+                arrows: true,
+                prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
                 dots: true,
                 appendDots: $('.services .dots-place'),
                 responsive: [{
@@ -801,16 +805,15 @@
                 dots: true,
                 appendDots: $('.team .dots-place'),
                 focusOnSelect: true,
-                arrows: false,
+                arrows: true,
+                prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
                 asNavFor: '.team__carousel_detail',
                 responsive: [{
                         breakpoint: 576,
                         settings: {
                             slidesToShow: 1,
-                            dots: false,
-                            arrows: true,
-                            prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
-                            nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">'
+                            dots: false
                         }
                     },
                     {
@@ -854,7 +857,9 @@
             $('.carousel__gallery').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false,
+                arrows: true,
+                prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
                 dots: true,
                 appendDots: $('.about-gallery .dots-place')
             });

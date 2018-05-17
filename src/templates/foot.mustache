@@ -90,7 +90,9 @@
             slidesToScroll: 1,
             autoplay: true,
             autoplatSpeed: 4000,
-            arrows: false,
+            arrows: true,
+            prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+            nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
             dots: true,
             appendDots: $('.services .dots-place'),
             responsive: [
@@ -114,17 +116,16 @@
             dots: true,
             appendDots: $('.team .dots-place'),
             focusOnSelect: true,
-            arrows: false,
+            arrows: true,
+            prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+            nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
             asNavFor: '.team__carousel_detail',
             responsive: [
               {
                 breakpoint: 576,
                 settings: {
                   slidesToShow: 1,
-                  dots: false,
-                  arrows: true,
-                  prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
-                  nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">'
+                  dots: false
                 }
               },
               {
@@ -170,7 +171,9 @@
           $('.carousel__gallery').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
+            arrows: true,
+            prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+            nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
             dots: true,
             appendDots: $('.about-gallery .dots-place')
           });

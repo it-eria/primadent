@@ -106,7 +106,7 @@
           }
         }
       }
-      .logo-item, .current {
+      .current {
         padding-bottom: 10px;
         &:after {
           content: '';
@@ -267,6 +267,7 @@
 // Dots place
 .dots-place {
   display: inline-block;
+  max-width: 300px;
   .slick-dots {
     position: relative;
     display: inline-block;
@@ -811,7 +812,7 @@
   // 3D tour button
   &.btn_3d-tour {
     width: 100%;
-    max-width: 230px;
+    max-width: 70px;
     // border: 2px solid $red !important;
     transition: all .3s ease-in-out;
     font-size: 1.25rem;
@@ -1173,6 +1174,73 @@
   position: relative;
   .main-banner__bottom-panel {
     position: relative;
+  }
+}
+
+// Something strange
+.logo-in-heading {
+  width: 380px;
+  position: relative;
+  top: -6px;
+}
+
+.review-form-wrapper {
+  display: none;
+}
+
+.review-form {
+  color: $dark-1;
+  label {
+    display: block;
+    width: 100%;
+    font-family: $ubuntu-bold;
+    &[for="photo"] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 130px;
+      background-color: rgba($white, .4);
+      border: 1px dashed $white;
+      border-radius: 3px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      &:hover {
+        background-color: rgba($white, .5);
+      }
+    }
+  }
+  input[type="text"], textarea {
+    font-family: $ubuntu-regular;
+    padding: 0.5rem;
+    border: 1px solid $white;
+    border-radius: 3px;
+    background-color: transparent;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $white;
+      opacity: .5;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $white;
+      opacity: .5;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $white;
+      opacity: .5;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $white;
+      opacity: .5;
+    }
+  }
+  .fileinput {
+    border: none;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
   }
 }
 
