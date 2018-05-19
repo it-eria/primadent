@@ -124,7 +124,38 @@
       }      
     ],
     "team-carousel-detail-slides": [
-      {"number": "1"},{"number": "2"},{"number": "3"},{"number": "4"},{"number": "5"},{"number": "6"},{"number": "7"},{"number": "8"}
+      {
+        "number": "1", 
+        "category": "cat-1"
+      },
+      {
+        "number": "2",
+        "category": "cat-2"
+      },
+      {
+        "number": "3",
+        "category": "cat-3"
+      },
+      {
+        "number": "4",
+        "category": "cat-4"
+      },
+      {
+        "number": "5",
+        "category": "cat-1"
+      },
+      {
+        "number": "6",
+        "category": "cat-2"
+      },
+      {
+        "number": "7",
+        "category": "cat-3"
+      },
+      {
+        "number": "8",
+        "category": "cat-4"
+      }
     ],
     "reviews-slides": [
       {},{},{},{}
@@ -199,32 +230,71 @@
     },
     "team-photo-carousel-slides": [
       {
-        "photo-name": "doctor-1.jpg"
+        "photo-name": "doctor-1.jpg",
+        "category": "cat-1"
       },
       {
-        "photo-name": "doctor-2.jpg"
+        "photo-name": "doctor-2.jpg",
+        "category": "cat-2"
       },
       {
-        "photo-name": "doctor-3.jpg"
+        "photo-name": "doctor-3.jpg",
+        "category": "cat-3"
       },
       {
-        "photo-name": "doctor-4.jpg"
+        "photo-name": "doctor-4.jpg",
+        "category": "cat-4"
       },      
       {
-        "photo-name": "doctor-1.jpg"
+        "photo-name": "doctor-1.jpg",
+        "category": "cat-1"
       },
       {
-        "photo-name": "doctor-2.jpg"
+        "photo-name": "doctor-2.jpg",
+        "category": "cat-2"
       },
       {
-        "photo-name": "doctor-3.jpg"
+        "photo-name": "doctor-3.jpg",
+        "category": "cat-3"
       },
       {
-        "photo-name": "doctor-4.jpg"
+        "photo-name": "doctor-4.jpg",
+        "category": "cat-4"
       }      
     ],
     "team-carousel-detail-slides": [
-      {"number": "1"},{"number": "2"},{"number": "3"},{"number": "4"},{"number": "5"},{"number": "6"},{"number": "7"},{"number": "8"}
+      {
+        "number": "1", 
+        "category": "cat-1"
+      },
+      {
+        "number": "2",
+        "category": "cat-2"
+      },
+      {
+        "number": "3",
+        "category": "cat-3"
+      },
+      {
+        "number": "4",
+        "category": "cat-4"
+      },
+      {
+        "number": "5",
+        "category": "cat-1"
+      },
+      {
+        "number": "6",
+        "category": "cat-2"
+      },
+      {
+        "number": "7",
+        "category": "cat-3"
+      },
+      {
+        "number": "8",
+        "category": "cat-4"
+      }
     ],
     "reviews-slides": [
       {},{},{},{}

@@ -27,6 +27,8 @@ $(function() {
     } else {
       $('.row.doctor').fadeIn(300);
     }
+    AOS.refresh();
+    AOS.refreshHard();
   });
 
   $('.row.prices').css('display', 'none');
@@ -44,6 +46,8 @@ $(function() {
     } else {
       $('.row.doctor').fadeIn(300);
     }
+    AOS.refresh();
+    AOS.refreshHard();
   });
 
   function teamRowHeight() {
@@ -125,7 +129,7 @@ function iteriaWatermark() {
   console.log(".`     ``     .//////\`  :     .:  -` `/       .: ");
 }
 
-// iteriaWatermark();
+iteriaWatermark();
 
 // Init AOS
 AOS.init();

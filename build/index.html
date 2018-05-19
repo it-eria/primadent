@@ -447,7 +447,7 @@
             <div class="row team">
                 <div class="col-12 col-lg-6 col-xl-5 order-2 order-lg-1 detail-side" data-aos="fade-down">
                     <div class="team__carousel_detail">
-                        <div class="team__carousel_detail__slide" data-cat="">
+                        <div class="team__carousel_detail__slide" data-cat="cat-1">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 1</h3>
                                 <p>
@@ -462,7 +462,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide" data-cat="">
+                        <div class="team__carousel_detail__slide" data-cat="cat-2">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 2</h3>
                                 <p>
@@ -477,7 +477,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide" data-cat="">
+                        <div class="team__carousel_detail__slide" data-cat="cat-3">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 3</h3>
                                 <p>
@@ -492,7 +492,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide" data-cat="">
+                        <div class="team__carousel_detail__slide" data-cat="cat-4">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 4</h3>
                                 <p>
@@ -507,7 +507,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide" data-cat="">
+                        <div class="team__carousel_detail__slide" data-cat="cat-1">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 5</h3>
                                 <p>
@@ -522,7 +522,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide" data-cat="">
+                        <div class="team__carousel_detail__slide" data-cat="cat-2">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 6</h3>
                                 <p>
@@ -537,7 +537,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide" data-cat="">
+                        <div class="team__carousel_detail__slide" data-cat="cat-3">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 7</h3>
                                 <p>
@@ -552,7 +552,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide" data-cat="">
+                        <div class="team__carousel_detail__slide" data-cat="cat-4">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 8</h3>
                                 <p>
@@ -941,6 +941,7 @@
 
         if (teamDoctorsCarousel > 0) {
             var str = $('.team__carousel_photo').html();
+            var str2 = $('.team__carousel_detail').html();
 
             function slickParam() {
                 return {
@@ -970,31 +971,38 @@
                 }
             }
 
+            function slickParam2() {
+                return {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false,
+                    fade: true,
+                    cssEase: 'linear',
+                    draggable: false
+                }
+            }
+
             $('.team__carousel_photo').slick(slickParam());
+            $('.team__carousel_detail').slick(slickParam2());
 
             $('#doctors-filter').on('change', function() {
                 var val = $(this).val();
-                $('.team__carousel_photo').fadeToggle(300);
+                $('.team__carousel_photo, .team__carousel_detail').fadeToggle(300);
                 setTimeout(function() {
-                    $('.team__carousel_photo').slick('unslick');
+                    $('.team__carousel_photo, .team__carousel_detail').slick('unslick');
                     $('.team__carousel_photo').html(str);
+                    $('.team__carousel_detail').html(str2);
                     if (val != 0) {
                         $('.team__carousel_photo .team__carousel_photo__slide:not([data-cat="' + val + '"])').remove();
+                        $('.team__carousel_detail .team__carousel_detail__slide:not([data-cat="' + val + '"])').remove();
                     }
                     $('.team__carousel_photo').slick(slickParam());
+                    $('.team__carousel_detail').slick(slickParam2());
                 }, 300);
-                $('.team__carousel_photo').fadeToggle(300);
-            });
-
-
-            $('.team__carousel_detail').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: false,
-                arrows: false,
-                fade: true,
-                cssEase: 'linear',
-                draggable: false
+                $('.team__carousel_photo, .team__carousel_detail').fadeToggle(300);
+                AOS.refresh();
+                AOS.refreshHard();
             });
         }
 

@@ -111,6 +111,7 @@
 
         if(teamDoctorsCarousel > 0) {
           var str = $('.team__carousel_photo').html();
+          var str2 = $('.team__carousel_detail').html();
 
           function slickParam() {
             return {
@@ -141,31 +142,38 @@
             }
           }
 
+          function slickParam2() {
+            return {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: false,
+              arrows: false,
+              fade: true,
+              cssEase: 'linear',
+              draggable: false
+            }
+          }
+
           $('.team__carousel_photo').slick(slickParam());
+          $('.team__carousel_detail').slick(slickParam2());
 
           $('#doctors-filter').on('change', function() {
             var val = $(this).val();
-            $('.team__carousel_photo').fadeToggle(300);
+            $('.team__carousel_photo, .team__carousel_detail').fadeToggle(300);
             setTimeout(function() {
-              $('.team__carousel_photo').slick('unslick');
+              $('.team__carousel_photo, .team__carousel_detail').slick('unslick');
               $('.team__carousel_photo').html(str);
+              $('.team__carousel_detail').html(str2);
               if(val != 0) {
                 $('.team__carousel_photo .team__carousel_photo__slide:not([data-cat="'+val+'"])').remove();
+                $('.team__carousel_detail .team__carousel_detail__slide:not([data-cat="'+val+'"])').remove();
               }
               $('.team__carousel_photo').slick(slickParam());
+              $('.team__carousel_detail').slick(slickParam2());
             }, 300);
-            $('.team__carousel_photo').fadeToggle(300);
-          });
-
-          
-          $('.team__carousel_detail').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false,
-            arrows: false,
-            fade: true,
-            cssEase: 'linear',
-            draggable: false
+            $('.team__carousel_photo, .team__carousel_detail').fadeToggle(300);
+            AOS.refresh();
+            AOS.refreshHard();
           });
         }
 
