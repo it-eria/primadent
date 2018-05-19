@@ -15,6 +15,37 @@ $(function() {
   //   }, 300);
   // }
 
+  $('#doc-filter-list').on('change', function(e) {
+    e.preventDefault();
+    var cat = $(this).val();
+    $('.row.doctor').removeAttr('data-aos');
+    if(cat != 0) {
+      $('.row.doctor').fadeOut(300);
+      setTimeout(function() {
+        $('.row.doctor[data-cat="'+cat+'"]').fadeIn(300);
+      }, 300);
+    } else {
+      $('.row.doctor').fadeIn(300);
+    }
+  });
+
+  $('.row.prices').css('display', 'none');
+  $('.row.prices').eq(0).css('display', 'flex')
+
+  $('#prices-filter').on('change', function(e) {
+    e.preventDefault();
+    var cat = $(this).val();
+    $('.row.prices').removeAttr('data-aos');
+    if(cat != 0) {
+      $('.row.prices').fadeOut(300);
+      setTimeout(function() {
+        $('.row.prices[data-cat="'+cat+'"]').fadeIn(300);
+      }, 300);
+    } else {
+      $('.row.doctor').fadeIn(300);
+    }
+  });
+
   function teamRowHeight() {
     if(windowWidth > 991) {
       $('.team').height($('.team__carousel_detail').height() + 10);

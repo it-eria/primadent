@@ -132,33 +132,57 @@
                     <div class="dark-text-block" data-aos="fade-left" data-aos-delay="800">
                         <form action="">
                             <div class="row">
-                                <div class="col-12 mb-3">
+                                <div class="col-12 col-lg-6 mb-3">
                                     <label for="name">Ім’я</label>
                                     <input type="text" placeholder="Ім’я" id="name">
                                 </div>
-                                <div class="col-12 mb-3">
+                                <div class="col-12 col-lg-6 mb-3">
                                     <label for="surname">Прізвище</label>
                                     <input type="text" placeholder="Прізвище" id="surname">
                                 </div>
-                                <div class="col-12 mb-3">
+                                <div class="col-12 col-lg-6 mb-3">
                                     <img src="assets/img/small-photo-1.jpg" alt="doctor" class="img-fluid">
                                 </div>
-                                <div class="col-12 mb-3">
-                                    <label for="doctor">Оберіть стоматолога</label>
-                                    <select id="doctor">
-                  <option value="0">Воронін Максим Валерійович</option>
-                  <option value="1">Воронін Максим Валерійович</option>
-                  <option value="2">Воронін Максим Валерійович</option>
-                  <option value="3">Воронін Максим Валерійович</option>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <div>
+                                        <label for="doctor">Оберіть стоматолога</label>
+                                        <select id="doctor">
+                    <option value="0">Воронін Максим Валерійович</option>
+                    <option value="1">Воронін Максим Валерійович</option>
+                    <option value="2">Воронін Максим Валерійович</option>
+                    <option value="3">Воронін Максим Валерійович</option>
+                  </select>
+                                    </div>
+                                    <div class="mt-3">
+                                        <label for="problem" class="mt-auto">Що вас турбує?</label>
+                                        <select id="problem">
+                    <option value="0">Кровоточивість ясен</option>
+                    <option value="1">Зубний біль від солодкого</option>
+                    <option value="2">Їжа весь час потрапляє між зубів</option>
+                    <option value="3">Поганий запах з рота</option>
+                    <option value="3">Набряк обличчя з однієї сторони</option>
+                    <option value="3">Стріляє у вусі</option>
+                    <option value="3">Інше</option>
+                  </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="time">Оберіть час</label>
+                                    <select id="time">
+                  <option value="0">9:00 - 11:00</option>
+                  <option value="1">11:00 - 13:00</option>
+                  <option value="2">13:00 - 15:00</option>
+                  <option value="3">15:00 - 17:00</option>
+                  <option value="3">17:00 - 19:00</option>
                 </select>
                                 </div>
-                                <div class="col-12 mb-3">
+                                <div class="col-12 col-lg-6 mb-3">
                                     <label for="date">Оберіть дату</label>
                                     <input type="text" id="date">
                                 </div>
-                                <!-- <div class="col-12 mb-3">
-                <textarea placeholder="Ваш коментар"></textarea>
-              </div> -->
+                                <div class="col-12 mb-3">
+                                    <textarea placeholder="Ваш коментар"></textarea>
+                                </div>
                                 <div class="col-12 text-right mt-3">
                                     <a href="#" class="btn btn_red">Записатись</a>
                                 </div>
@@ -285,31 +309,53 @@
         }
 
         if (teamDoctorsCarousel > 0) {
-            $('.team__carousel_photo').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                dots: true,
-                appendDots: $('.team .dots-place'),
-                focusOnSelect: true,
-                arrows: true,
-                prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
-                nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
-                asNavFor: '.team__carousel_detail',
-                responsive: [{
-                        breakpoint: 576,
-                        settings: {
-                            slidesToShow: 1,
-                            dots: false
+            var str = $('.team__carousel_photo').html();
+
+            function slickParam() {
+                return {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: true,
+                    appendDots: $('.team .dots-place'),
+                    focusOnSelect: true,
+                    arrows: true,
+                    prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                    nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
+                    asNavFor: '.team__carousel_detail',
+                    responsive: [{
+                            breakpoint: 576,
+                            settings: {
+                                slidesToShow: 1,
+                                dots: false
+                            }
+                        },
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 1
+                            }
                         }
-                    },
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 1
-                        }
+                    ]
+                }
+            }
+
+            $('.team__carousel_photo').slick(slickParam());
+
+            $('#doctors-filter').on('change', function() {
+                var val = $(this).val();
+                $('.team__carousel_photo').fadeToggle(300);
+                setTimeout(function() {
+                    $('.team__carousel_photo').slick('unslick');
+                    $('.team__carousel_photo').html(str);
+                    if (val != 0) {
+                        $('.team__carousel_photo .team__carousel_photo__slide:not([data-cat="' + val + '"])').remove();
                     }
-                ]
+                    $('.team__carousel_photo').slick(slickParam());
+                }, 300);
+                $('.team__carousel_photo').fadeToggle(300);
             });
+
+
             $('.team__carousel_detail').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,

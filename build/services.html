@@ -268,7 +268,7 @@
             </div>
         </div>
     </section>
-    <section class="content-block bg-light-blue">
+    <section class="content-block">
         <div class="container no-gutter-on-sm">
             <div class="row">
                 <div class="col-12 mb-4 mb-lg-2 text-center text-lg-left" data-aos="fade-right">
@@ -280,7 +280,7 @@
             <div class="row team">
                 <div class="col-12 col-lg-6 col-xl-5 order-2 order-lg-1 detail-side" data-aos="fade-down">
                     <div class="team__carousel_detail">
-                        <div class="team__carousel_detail__slide">
+                        <div class="team__carousel_detail__slide" data-cat="">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 1</h3>
                                 <p>
@@ -295,7 +295,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide">
+                        <div class="team__carousel_detail__slide" data-cat="">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 2</h3>
                                 <p>
@@ -310,7 +310,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide">
+                        <div class="team__carousel_detail__slide" data-cat="">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 3</h3>
                                 <p>
@@ -325,7 +325,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide">
+                        <div class="team__carousel_detail__slide" data-cat="">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 4</h3>
                                 <p>
@@ -340,7 +340,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide">
+                        <div class="team__carousel_detail__slide" data-cat="">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 5</h3>
                                 <p>
@@ -355,7 +355,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide">
+                        <div class="team__carousel_detail__slide" data-cat="">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 6</h3>
                                 <p>
@@ -370,7 +370,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide">
+                        <div class="team__carousel_detail__slide" data-cat="">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 7</h3>
                                 <p>
@@ -385,7 +385,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="team__carousel_detail__slide">
+                        <div class="team__carousel_detail__slide" data-cat="">
                             <div class="dark-text-block">
                                 <h3>Воронін Максим Валерійович 8</h3>
                                 <p>
@@ -404,32 +404,38 @@
                 </div>
                 <div class="col-12 col-lg-7 col-xl-8 offset-lg-5 offset-xl-4 order-1 order-lg-2" data-aos="fade-down" data-aos-delay="300">
                     <div class="team__carousel_photo">
-                        <div class="team__carousel_photo__slide pl-1 pr-1">
+                        <div class="team__carousel_photo__slide pl-1 pr-1" data-cat="">
                             <div class="photo-block" style="background-image: url(assets/img/doctor-1.jpg)"></div>
                         </div>
-                        <div class="team__carousel_photo__slide pl-1 pr-1">
+                        <div class="team__carousel_photo__slide pl-1 pr-1" data-cat="">
                             <div class="photo-block" style="background-image: url(assets/img/doctor-2.jpg)"></div>
                         </div>
-                        <div class="team__carousel_photo__slide pl-1 pr-1">
+                        <div class="team__carousel_photo__slide pl-1 pr-1" data-cat="">
                             <div class="photo-block" style="background-image: url(assets/img/doctor-3.jpg)"></div>
                         </div>
-                        <div class="team__carousel_photo__slide pl-1 pr-1">
+                        <div class="team__carousel_photo__slide pl-1 pr-1" data-cat="">
                             <div class="photo-block" style="background-image: url(assets/img/doctor-4.jpg)"></div>
                         </div>
-                        <div class="team__carousel_photo__slide pl-1 pr-1">
+                        <div class="team__carousel_photo__slide pl-1 pr-1" data-cat="">
                             <div class="photo-block" style="background-image: url(assets/img/doctor-1.jpg)"></div>
                         </div>
-                        <div class="team__carousel_photo__slide pl-1 pr-1">
+                        <div class="team__carousel_photo__slide pl-1 pr-1" data-cat="">
                             <div class="photo-block" style="background-image: url(assets/img/doctor-2.jpg)"></div>
                         </div>
-                        <div class="team__carousel_photo__slide pl-1 pr-1">
+                        <div class="team__carousel_photo__slide pl-1 pr-1" data-cat="">
                             <div class="photo-block" style="background-image: url(assets/img/doctor-3.jpg)"></div>
                         </div>
-                        <div class="team__carousel_photo__slide pl-1 pr-1">
+                        <div class="team__carousel_photo__slide pl-1 pr-1" data-cat="">
                             <div class="photo-block" style="background-image: url(assets/img/doctor-4.jpg)"></div>
                         </div>
                     </div>
                     <div class="dots-place dots-place_dark mt-2 d-none d-lg-block"></div>
+                    <select id="doctors-filter">
+          <option value="0">Усі лікарі</option>
+          <option value="cat-1">Стоматолог-терапевт</option>
+          <option value="cat-2">Стоматолог-хірург</option>
+          <option value="cat-3">Стоматолог-ортодонт</option>
+        </select>
                 </div>
                 <div class="col-12 d-block d-lg-none order-3 text-center">
                     <div class="dots-place dots-place_dark mt-0 ml-0"></div>
@@ -444,7 +450,18 @@
                     <h2>Ціни</h2>
                 </div>
             </div>
-            <div class="row justify-content-center prices">
+            <div class="row mt-3 justify-content-end">
+                <div class="col-auto">
+                    <select id="prices-filter">
+          <option value="cat-1">Загальна стоматологія</option>
+          <option value="cat-2">Терапевтична стоматологія</option>
+          <option value="cat-3">Хірургічна стоматологія</option>
+          <option value="cat-4">Стоматологія ортодонтії</option>
+        </select>
+                </div>
+            </div>
+            <!-- Category 1 -->
+            <div class="row justify-content-center prices" data-cat="cat-1">
                 <div class="col-12 col-lg-8 mt-3 mt-lg-5 bg-light-blue px-3 py-5 px-lg-5" data-aos="fade-left">
                     <div class="dark-text-block red-on-back">
                         <h3>
@@ -559,9 +576,361 @@
                     </ul>
                 </div>
             </div>
+            <!-- /Category 1 -->
+            <!-- Category 2 -->
+            <div class="row justify-content-center prices" data-cat="cat-2">
+                <div class="col-12 col-lg-8 mt-3 mt-lg-5 bg-light-blue px-3 py-5 px-lg-5" data-aos="fade-left">
+                    <div class="dark-text-block red-on-back">
+                        <h3>
+                            Терапевтична стоматологія
+                        </h3>
+                    </div>
+                    <ul class="price-list mt-5">
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Огляд, консультація
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Прийом дитячого лікаря-стоматолога (30 хвилин, адаптація дитини до лікування)
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Видалення молочного зуба багатокореневого
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ускладнене видалення молочного зуба
+            </span>
+                            <span>
+              200-350 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Тимчасове пломбування кореневого каналу кальцієм (багатокореневий зуб)   
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ендодонтичне лікування багатокореневих молочних зубів
+            </span>
+                            <span>
+              350 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Огляд, консультація
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Прийом дитячого лікаря-стоматолога (30 хвилин, адаптація дитини до лікування)
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Видалення молочного зуба багатокореневого   
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Видалення молочного зуба при фізіологічній резорбції
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ускладнене видалення молочного зуба
+            </span>
+                            <span>
+              200-350 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Тимчасове пломбування кореневого каналу кальцієм (багатокореневий зуб)   
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ендодонтичне лікування багатокореневих молочних зубів
+            </span>
+                            <span>
+              350 грн.
+            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /Category 2 -->
+            <!-- Category 3 -->
+            <div class="row justify-content-center prices" data-cat="cat-3">
+                <div class="col-12 col-lg-8 mt-3 mt-lg-5 bg-light-blue px-3 py-5 px-lg-5" data-aos="fade-left">
+                    <div class="dark-text-block red-on-back">
+                        <h3>
+                            Хірургічна стоматологія
+                        </h3>
+                    </div>
+                    <ul class="price-list mt-5">
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Огляд, консультація
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Прийом дитячого лікаря-стоматолога (30 хвилин, адаптація дитини до лікування)
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Видалення молочного зуба багатокореневого
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ускладнене видалення молочного зуба
+            </span>
+                            <span>
+              200-350 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Тимчасове пломбування кореневого каналу кальцієм (багатокореневий зуб)   
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ендодонтичне лікування багатокореневих молочних зубів
+            </span>
+                            <span>
+              350 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Огляд, консультація
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Прийом дитячого лікаря-стоматолога (30 хвилин, адаптація дитини до лікування)
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Видалення молочного зуба багатокореневого   
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Видалення молочного зуба при фізіологічній резорбції
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ускладнене видалення молочного зуба
+            </span>
+                            <span>
+              200-350 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Тимчасове пломбування кореневого каналу кальцієм (багатокореневий зуб)   
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ендодонтичне лікування багатокореневих молочних зубів
+            </span>
+                            <span>
+              350 грн.
+            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /Category 3 -->
+            <!-- Category 4 -->
+            <div class="row justify-content-center prices" data-cat="cat-4">
+                <div class="col-12 col-lg-8 mt-3 mt-lg-5 bg-light-blue px-3 py-5 px-lg-5" data-aos="fade-left">
+                    <div class="dark-text-block red-on-back">
+                        <h3>
+                            Стоматологія ортодонтії
+                        </h3>
+                    </div>
+                    <ul class="price-list mt-5">
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Огляд, консультація
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Прийом дитячого лікаря-стоматолога (30 хвилин, адаптація дитини до лікування)
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Видалення молочного зуба багатокореневого
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ускладнене видалення молочного зуба
+            </span>
+                            <span>
+              200-350 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Тимчасове пломбування кореневого каналу кальцієм (багатокореневий зуб)   
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ендодонтичне лікування багатокореневих молочних зубів
+            </span>
+                            <span>
+              350 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Огляд, консультація
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Прийом дитячого лікаря-стоматолога (30 хвилин, адаптація дитини до лікування)
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Видалення молочного зуба багатокореневого   
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Видалення молочного зуба при фізіологічній резорбції
+            </span>
+                            <span>
+              100 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ускладнене видалення молочного зуба
+            </span>
+                            <span>
+              200-350 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Тимчасове пломбування кореневого каналу кальцієм (багатокореневий зуб)   
+            </span>
+                            <span>
+              200 грн.
+            </span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <span>
+              Ендодонтичне лікування багатокореневих молочних зубів
+            </span>
+                            <span>
+              350 грн.
+            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /Category 4 -->
         </div>
     </section>
-    <section class="content-block">
+    <section class="content-block bg-light-blue">
         <div class="container no-gutter-on-sm">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-9 col-xl-7">
@@ -644,6 +1013,24 @@
                 </div>
             </div>
         </div>
+        <div class="container review-form-wrapper mt-3">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9 col-xl-7">
+                    <form action="#" class="review-form dark-text-block">
+                        <label for="name">Ваші ініціали</label>
+                        <input type="text" placeholder="П.І.Б" required class="d-block w-100 mb-3" id="name">
+                        <label for="review">Відгук</label>
+                        <textarea placeholder="Ваш відгук" rows="3" required class="d-block w-100 mb-3" id="review"></textarea>
+                        <img src="" class="photo-preview" alt="preview" style="display: none; width: 200px; margin-bottom: 1rem;">
+                        <label for="photo"><span>Завантажити фото</span></label>
+                        <div class="fileinput">
+                            <input type="file" id="photo" accept="image/*" class="d-block w-100 mb-3">
+                        </div>
+                        <input type="submit" value="Залишити відгук" class="btn btn_red">
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="content-block bg-light-blue">
         <div class="container">
@@ -699,6 +1086,28 @@
                                 <div class="col-12 col-lg-6 mb-3">
                                     <label for="date">Оберіть дату</label>
                                     <input type="text" id="date">
+                                </div>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="time">Оберіть час</label>
+                                    <select id="time">
+                  <option value="0">9:00 - 11:00</option>
+                  <option value="1">11:00 - 13:00</option>
+                  <option value="2">13:00 - 15:00</option>
+                  <option value="3">15:00 - 17:00</option>
+                  <option value="3">17:00 - 19:00</option>
+                </select>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="problem">Що вас турбує?</label>
+                                    <select id="problem">
+                  <option value="0">Кровоточивість ясен</option>
+                  <option value="1">Зубний біль від солодкого</option>
+                  <option value="2">Їжа весь час потрапляє між зубів</option>
+                  <option value="3">Поганий запах з рота</option>
+                  <option value="3">Набряк обличчя з однієї сторони</option>
+                  <option value="3">Стріляє у вусі</option>
+                  <option value="3">Інше</option>
+                </select>
                                 </div>
                                 <div class="col-12 mb-3">
                                     <textarea placeholder="Ваш коментар"></textarea>
@@ -851,31 +1260,53 @@
         }
 
         if (teamDoctorsCarousel > 0) {
-            $('.team__carousel_photo').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                dots: true,
-                appendDots: $('.team .dots-place'),
-                focusOnSelect: true,
-                arrows: true,
-                prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
-                nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
-                asNavFor: '.team__carousel_detail',
-                responsive: [{
-                        breakpoint: 576,
-                        settings: {
-                            slidesToShow: 1,
-                            dots: false
+            var str = $('.team__carousel_photo').html();
+
+            function slickParam() {
+                return {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: true,
+                    appendDots: $('.team .dots-place'),
+                    focusOnSelect: true,
+                    arrows: true,
+                    prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                    nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
+                    asNavFor: '.team__carousel_detail',
+                    responsive: [{
+                            breakpoint: 576,
+                            settings: {
+                                slidesToShow: 1,
+                                dots: false
+                            }
+                        },
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 1
+                            }
                         }
-                    },
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 1
-                        }
+                    ]
+                }
+            }
+
+            $('.team__carousel_photo').slick(slickParam());
+
+            $('#doctors-filter').on('change', function() {
+                var val = $(this).val();
+                $('.team__carousel_photo').fadeToggle(300);
+                setTimeout(function() {
+                    $('.team__carousel_photo').slick('unslick');
+                    $('.team__carousel_photo').html(str);
+                    if (val != 0) {
+                        $('.team__carousel_photo .team__carousel_photo__slide:not([data-cat="' + val + '"])').remove();
                     }
-                ]
+                    $('.team__carousel_photo').slick(slickParam());
+                }, 300);
+                $('.team__carousel_photo').fadeToggle(300);
             });
+
+
             $('.team__carousel_detail').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,

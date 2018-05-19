@@ -1,4 +1,4 @@
-<section class="content-block bg-light-blue">
+<section class="content-block">
   <div class="container no-gutter-on-sm">
     <div class="row">
       <div class="col-12 mb-4 mb-lg-2 text-center text-lg-left" data-aos="fade-right">
@@ -11,7 +11,7 @@
       <div class="col-12 col-lg-6 col-xl-5 order-2 order-lg-1 detail-side" data-aos="fade-down">
         <div class="team__carousel_detail">
           {{#team-carousel-detail-slides}}
-          <div class="team__carousel_detail__slide">
+          <div class="team__carousel_detail__slide" data-cat="{{category}}">
             <div class="dark-text-block">
               <h3>Воронін Максим Валерійович {{number}}</h3>
               <p>
@@ -31,12 +31,18 @@
       <div class="col-12 col-lg-7 col-xl-8 offset-lg-5 offset-xl-4 order-1 order-lg-2" data-aos="fade-down" data-aos-delay="300">
         <div class="team__carousel_photo">
           {{#team-photo-carousel-slides}}
-          <div class="team__carousel_photo__slide pl-1 pr-1">
+          <div class="team__carousel_photo__slide pl-1 pr-1" data-cat="{{category}}">
             <div class="photo-block" style="background-image: url(assets/img/{{photo-name}})"></div>
           </div>
           {{/team-photo-carousel-slides}}
         </div>
         <div class="dots-place dots-place_dark mt-2 d-none d-lg-block"></div>
+        <select id="doctors-filter">
+          <option value="0">Усі лікарі</option>
+          <option value="cat-1">Стоматолог-терапевт</option>
+          <option value="cat-2">Стоматолог-хірург</option>
+          <option value="cat-3">Стоматолог-ортодонт</option>
+        </select>
       </div>
       <div class="col-12 d-block d-lg-none order-3 text-center">
         <div class="dots-place dots-place_dark mt-0 ml-0"></div>

@@ -1,4 +1,4 @@
-<section class="content-block">
+<section class="content-block bg-light-blue">
   <div class="container no-gutter-on-sm">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-9 col-xl-7">
@@ -38,6 +38,24 @@
             <a href="#" class="btn btn_red">Написати відгук <i class="icon icon-down-arr"></i></a>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="container review-form-wrapper mt-3">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <form action="#" class="review-form dark-text-block">
+          <label for="name">Ваші ініціали</label>
+          <input type="text" placeholder="П.І.Б" required class="d-block w-100 mb-3" id="name">
+          <label for="review">Відгук</label>
+          <textarea placeholder="Ваш відгук" rows="3" required class="d-block w-100 mb-3" id="review"></textarea>
+          <img src="" class="photo-preview" alt="preview" style="display: none; width: 200px; margin-bottom: 1rem;">
+          <label for="photo"><span>Завантажити фото</span></label>
+          <div class="fileinput">
+            <input type="file" id="photo" accept="image/*" class="d-block w-100 mb-3">
+          </div>
+          <input type="submit" value="Залишити відгук" class="btn btn_red">
+        </form>
       </div>
     </div>
   </div>

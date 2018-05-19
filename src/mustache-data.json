@@ -428,20 +428,34 @@
     },
     "doctor-items": [
       {
+        "doc-category": "cat-1",
         "doc-photo-name": "doc-1.jpg",
         "modal-number": "modal-1"
       },
       {
+        "doc-category": "cat-2",
         "doc-photo-name": "doc-2.jpg",
         "modal-number": "modal-2"
       },
       {
+        "doc-category": "cat-3",
         "doc-photo-name": "doc-3.jpg",
         "modal-number": "modal-3"
       },
       {
+        "doc-category": "cat-1",
         "doc-photo-name": "doc-4.jpg",
         "modal-number": "modal-4"
+      },
+      {
+        "doc-category": "cat-2",
+        "doc-photo-name": "doc-2.jpg",
+        "modal-number": "modal-2"
+      },
+      {
+        "doc-category": "cat-3",
+        "doc-photo-name": "doc-3.jpg",
+        "modal-number": "modal-3"
       }
     ],
     "reviews-slides": [

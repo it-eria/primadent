@@ -93,6 +93,16 @@
         height: 150px;
       }
     } 
+  }
+  .team {
+    #doctors-filter {
+      display: none !important;
+    }
+    .team__carousel_photo__slide  {
+      .photo-block {
+        margin-left: auto;
+      }
+    }
   } 
 }
 
@@ -101,6 +111,7 @@
     font-size: 12px;
   }
   .header {
+    position: relative;
     &__main-nav {
       height: auto;
       max-height: 0;
@@ -174,6 +185,12 @@
     }
   }
   .main-banner {
+    .arrows-container {
+      top: 25%;
+      .btn_main-carousel-prev, .btn_main-carousel-next {
+        transform: translate(0, -50%) scale(.7);
+      }
+    }
     &__contacts {
       li {
         & + li {
@@ -215,6 +232,11 @@
   }
   .team {
     justify-content: center;
+    #doctors-filter {
+      position: absolute !important;
+      top: 0 !important;
+      right: 15px;
+    }
     &__carousel_photo {
       top: 0;
       &__slide {
@@ -222,6 +244,7 @@
           padding-top: 0;
           width: 222px;
           height: 315px;
+          margin-left: 0;
         }
       }
     }
@@ -299,15 +322,53 @@
     }
   }
   .doctors-filter {
-    display: none;
-  }
-  .doctors-filter {
     position: relative;
   }
   .modal-content {
     .close {
       right: 5px;
       top: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .services__carousel, .team__carousel_photo, .carousel__gallery {
+    .carousel-ctrl-btn {
+      top: 50%;
+    }
+  }
+  .team__carousel_photo {
+    .carousel-ctrl-btn {
+      &_prev {
+        border-color: $white;
+        left: -15px;
+      }
+      &_next {
+        right: -15px;
+      }
+    }
+  }
+  .carousel__gallery {
+    .carousel-ctrl-btn {
+      &_prev {
+        left: -15px;
+      }
+      &_next {
+        right: -15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .team {
+    #doctors-filter {
+      display: block;
+      float: none;
+      position: relative;
+      top: 0;
+      margin: 1rem 0 0 auto;
     }
   }
 }

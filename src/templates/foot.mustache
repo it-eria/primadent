@@ -110,32 +110,54 @@
         }
 
         if(teamDoctorsCarousel > 0) {
-          $('.team__carousel_photo').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            dots: true,
-            appendDots: $('.team .dots-place'),
-            focusOnSelect: true,
-            arrows: true,
-            prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
-            nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
-            asNavFor: '.team__carousel_detail',
-            responsive: [
-              {
-                breakpoint: 576,
-                settings: {
-                  slidesToShow: 1,
-                  dots: false
+          var str = $('.team__carousel_photo').html();
+
+          function slickParam() {
+            return {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              dots: true,
+              appendDots: $('.team .dots-place'),
+              focusOnSelect: true,
+              arrows: true,
+              prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+              nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
+              asNavFor: '.team__carousel_detail',
+              responsive: [
+                {
+                  breakpoint: 576,
+                  settings: {
+                    slidesToShow: 1,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 1
+                  }
                 }
-              },
-              {
-                breakpoint: 992,
-                settings: {
-                  slidesToShow: 1
-                }
+              ]
+            }
+          }
+
+          $('.team__carousel_photo').slick(slickParam());
+
+          $('#doctors-filter').on('change', function() {
+            var val = $(this).val();
+            $('.team__carousel_photo').fadeToggle(300);
+            setTimeout(function() {
+              $('.team__carousel_photo').slick('unslick');
+              $('.team__carousel_photo').html(str);
+              if(val != 0) {
+                $('.team__carousel_photo .team__carousel_photo__slide:not([data-cat="'+val+'"])').remove();
               }
-            ]
+              $('.team__carousel_photo').slick(slickParam());
+            }, 300);
+            $('.team__carousel_photo').fadeToggle(300);
           });
+
+          
           $('.team__carousel_detail').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
