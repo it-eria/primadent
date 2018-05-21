@@ -503,6 +503,18 @@
       right: -30px;
     }
   }
+  .btn_red {
+    .icon-down-arr {
+      display: inline-block;
+      transform-origin: 50% 50%;
+      transition: all .3s ease-in-out;
+    }
+    &.clicked {
+      .icon-down-arr {
+        transform: translate(0, 3px) rotateX(-180deg);
+      }
+    }
+  }
 }
 
 // Contacts
@@ -1260,5 +1272,45 @@ select {
   option {
     background-color: rgba($dark-1, .9);
     line-height: 1.5;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+  & + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      border: 3px solid $white;
+      position: absolute;
+      left: -1.5rem;
+      top: 50%;
+      transform: translate(0, -50%);
+      border-radius: 3px;
+      background-color: transparent;
+      transition: all .3s ease-in-out;
+    }
+  }
+  &:checked {
+    & + label {
+      &:before {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.tech-modal {
+  background-color: rgba(0,0,0,.7);
+  .modal-content {
+    .close {
+      top: -5px;
+      right: -5px;
+    }
   }
 }

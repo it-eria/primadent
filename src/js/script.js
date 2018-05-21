@@ -3,6 +3,11 @@ $(function() {
   var windowWidth = $(window).innerWidth();
   var docDescr = [];
 
+  $('.row.prices').css('display', 'none');
+  $('.row.prices').eq(0).css('display', 'flex');
+
+  AOS.init();
+
   // function putLogoItemToNav() {
   //   var logoItem = '<li style="max-width: 0; opacity: 0; top: 0;" class="logo-item d-none d-lg-inline-block"><a href="https://'+window.location.hostname+'/"><img src="assets/img/logo.png" alt="logo"></a></li>';
   //   var insertAfterObj = $('.header__main-nav ul li').eq($('.header__main-nav ul li').length / 2 - 1);
@@ -15,8 +20,7 @@ $(function() {
   //   }, 300);
   // }
 
-  $('#doc-filter-list').on('change', function(e) {
-    e.preventDefault();
+  $('#doc-filter-list').on('change', function() {
     var cat = $(this).val();
     $('.row.doctor').removeAttr('data-aos');
     if(cat != 0) {
@@ -27,12 +31,7 @@ $(function() {
     } else {
       $('.row.doctor').fadeIn(300);
     }
-    AOS.refresh();
-    AOS.refreshHard();
   });
-
-  $('.row.prices').css('display', 'none');
-  $('.row.prices').eq(0).css('display', 'flex')
 
   $('#prices-filter').on('change', function(e) {
     e.preventDefault();
@@ -46,8 +45,6 @@ $(function() {
     } else {
       $('.row.doctor').fadeIn(300);
     }
-    AOS.refresh();
-    AOS.refreshHard();
   });
 
   function teamRowHeight() {
@@ -78,6 +75,7 @@ $(function() {
 
   $('.reviews .btn_red').on('click', function(e) {
     e.preventDefault();
+    $(this).toggleClass('clicked');
     $('.review-form-wrapper').fadeToggle(300);
   });
 
@@ -89,7 +87,6 @@ $(function() {
 
   $('#doctors-filter').on('change', function() {
     var val = $(this).val();
-    console.log(val);
     $('.team__carousel_photo').slick('slickFilter', '.team__carousel_photo__slide');    
     $('.team__carousel_photo').slick('slickFilter', '.team__carousel_photo__slide[data-cat="'+val+'"]');
   });
@@ -107,6 +104,10 @@ $(function() {
       
       teamRowHeight();
     }, 250);
+  });
+
+  onElementHeightChange(document.body, function() {
+    AOS.refresh();
   });
 });
 
@@ -131,5 +132,20 @@ function iteriaWatermark() {
 
 iteriaWatermark();
 
-// Init AOS
-AOS.init();
+function onElementHeightChange(elm, callback) {
+  var lastHeight = elm.clientHeight
+  var newHeight;
+  
+  (function run() {
+      newHeight = elm.clientHeight;      
+      if (lastHeight !== newHeight) callback();
+      lastHeight = newHeight;
+
+      if (elm.onElementHeightChangeTimer) {
+        clearTimeout(elm.onElementHeightChangeTimer); 
+      }
+
+      elm.onElementHeightChangeTimer = setTimeout(run, 200);
+  })();
+}
+
