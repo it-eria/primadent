@@ -1272,6 +1272,9 @@ select {
   option {
     background-color: rgba($dark-1, .9);
     line-height: 1.5;
+    &:checked, &:hover {
+      box-shadow: 0 0 10px 100px $red inset;
+    }
   }
 }
 
@@ -1284,14 +1287,13 @@ input[type="checkbox"] {
     &:before {
       content: '';
       display: block;
-      width: 1rem;
-      height: 1rem;
-      border: 3px solid $white;
+      width: 0.85rem;
+      height: 0.85rem;
+      border: 2px solid $white;
       position: absolute;
       left: -1.5rem;
       top: 50%;
       transform: translate(0, -50%);
-      border-radius: 3px;
       background-color: transparent;
       transition: all .3s ease-in-out;
     }
@@ -1299,7 +1301,7 @@ input[type="checkbox"] {
   &:checked {
     & + label {
       &:before {
-        background-color: $white;
+        background-color: $red;
       }
     }
   }

@@ -330,6 +330,9 @@
       top: 5px;
     }
   }
+  .map-wrapper {
+    padding-top: 60%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -433,5 +436,11 @@
     .dark-text-block {
       padding-right: 100px;
     }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1469px) {
+  .tech-title-aligment-class {
+    text-align: right !important;
   }
 }
