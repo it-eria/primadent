@@ -18,7 +18,7 @@
       ],
       "main-nav-items": [
         {
-          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">",
+          "item": "<img src=\"assets/img/logo-white.svg\" alt=\"logo\">",
           "class": "logo-item"
         },
         {
@@ -192,7 +192,8 @@
       ],
       "main-nav-items": [
         {
-          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">"
+          "item": "<img src=\"assets/img/logo-white.svg\" alt=\"logo\">",
+          "class": "logo-item"
         },
         {
           "item": "Про клініку"
@@ -331,7 +332,8 @@
       ],
       "main-nav-items": [
         {
-          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">"
+          "item": "<img src=\"assets/img/logo-white.svg\" alt=\"logo\">",
+          "class": "logo-item"
         },
         {
           "item": "Про клініку",
@@ -430,7 +432,8 @@
       ],
       "main-nav-items": [
         {
-          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">"
+          "item": "<img src=\"assets/img/logo-white.svg\" alt=\"logo\">",
+          "class": "logo-item"
         },
         {
           "item": "Про клініку"
@@ -564,7 +567,8 @@
       ],
       "main-nav-items": [
         {
-          "item": "<img src=\"assets/img/logo.png\" alt=\"logo\">"
+          "item": "<img src=\"assets/img/logo-white.svg\" alt=\"logo\">",
+          "class": "logo-item"
         },
         {
           "item": "Про клініку"

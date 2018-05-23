@@ -3,7 +3,7 @@
   min-width: 320px;
   background-color: $header-bg-color;
   color: $white;
-  padding: 14px 0;
+  padding: 11px 0 4px;
   position: absolute;
   top: 0;
   left: 0;
@@ -122,6 +122,10 @@
       }
       .logo-item {
         top: -3px;
+        display: inline-block;
+        img {
+          height: 2.5rem;
+        }
       }
     }
   }
@@ -1315,4 +1319,8 @@ input[type="checkbox"] {
       right: -5px;
     }
   }
+}
+
+img.logo {
+  height: 2.5rem;
 }
