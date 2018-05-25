@@ -74,19 +74,24 @@
     },
     "index-services-slides": [
       {
-        "photo-name":"services-slide-photo.jpg"
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "1"
       },
       {
-        "photo-name":"services-slide-photo.jpg"
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "2"
       },
       {
-        "photo-name":"services-slide-photo.jpg"
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "3"
       },
       {
-        "photo-name":"services-slide-photo.jpg"
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "4"
       },
       {
-        "photo-name":"services-slide-photo.jpg"
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "5"
       }
     ],
     "team-photo-carousel-slides": [
@@ -297,6 +302,28 @@
         "category": "cat-4"
       }
     ],
+    "index-services-slides": [
+      {
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "1"
+      },
+      {
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "2"
+      },
+      {
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "3"
+      },
+      {
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "4"
+      },
+      {
+        "photo-name":"services-slide-photo.jpg",
+        "modal-index": "5"
+      }
+    ],
     "reviews-slides": [
       {},{},{},{}
     ],
@@ -353,44 +380,19 @@
     "main-banner": {
       "slides": [
         {
-          "slide-name": "main-carousel-slide-1.jpg",
-          "slide-desc": {
-            "title": "<i class=\"icon icon-service\"></i> Терапевтична стоматологія",
-            "text": "Ми діагностуємо, проводимо профілактику та лікування захворювань ясен, кореневих каналів, пульп (зубних нервів). Встановлюємо коронки, вініри та мости і звичайно, що пломбуємо зуби.",
-            "more": "Більше інформації"
-          }
+          "slide-name": "main-carousel-slide-1.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-1.jpg",
-          "slide-desc": {
-            "title": "<i class=\"icon icon-service\"></i> Терапевтична стоматологія",
-            "text": "Ми діагностуємо, проводимо профілактику та лікування захворювань ясен, кореневих каналів, пульп (зубних нервів). Встановлюємо коронки, вініри та мости і звичайно, що пломбуємо зуби.",
-            "more": "Більше інформації"
-          }
+          "slide-name": "main-carousel-slide-1.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-1.jpg",
-          "slide-desc": {
-            "title": "<i class=\"icon icon-service\"></i> Терапевтична стоматологія",
-            "text": "Ми діагностуємо, проводимо профілактику та лікування захворювань ясен, кореневих каналів, пульп (зубних нервів). Встановлюємо коронки, вініри та мости і звичайно, що пломбуємо зуби.",
-            "more": "Більше інформації"
-          }
+          "slide-name": "main-carousel-slide-1.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-1.jpg",
-          "slide-desc": {
-            "title": "<i class=\"icon icon-service\"></i> Терапевтична стоматологія",
-            "text": "Ми діагностуємо, проводимо профілактику та лікування захворювань ясен, кореневих каналів, пульп (зубних нервів). Встановлюємо коронки, вініри та мости і звичайно, що пломбуємо зуби.",
-            "more": "Більше інформації"
-          }
+          "slide-name": "main-carousel-slide-1.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-1.jpg",
-          "slide-desc": {
-            "title": "<i class=\"icon icon-service\"></i> Терапевтична стоматологія",
-            "text": "Ми діагностуємо, проводимо профілактику та лікування захворювань ясен, кореневих каналів, пульп (зубних нервів). Встановлюємо коронки, вініри та мости і звичайно, що пломбуємо зуби.",
-            "more": "Більше інформації"
-          }
+          "slide-name": "main-carousel-slide-1.jpg"
         }
       ]
     },
@@ -453,49 +455,19 @@
     "main-banner": {
       "slides": [
         {
-          "slide-name": "main-carousel-slide-3.jpg",
-          "slide-desc": {
-            "title": "Наші стоматологи",
-            "text": "Відчувати себе захищеним і знати, що про тебе піклуються - це те, що потрібно кожному з нас.<br><br>Ми дуже хочемо, що переступивши поріг нашої клініки, кожен з пацієнтів міг не тільки отримати кваліфіковану допомогу лікарів Prima Dent, але і зануритися в атмосферу довіри, уваги і доброзичливості.",
-            "more": "Записатись на прийом",
-            "additional-class": "our-doctors"
-          }
+          "slide-name": "main-carousel-slide-3.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-2.jpg",
-          "slide-desc": {
-            "title": "Наші стоматологи",
-            "text": "Відчувати себе захищеним і знати, що про тебе піклуються - це те, що потрібно кожному з нас.<br><br>Ми дуже хочемо, що переступивши поріг нашої клініки, кожен з пацієнтів міг не тільки отримати кваліфіковану допомогу лікарів Prima Dent, але і зануритися в атмосферу довіри, уваги і доброзичливості.",
-            "more": "Записатись на прийом",
-            "additional-class": "our-doctors"
-          }
+          "slide-name": "main-carousel-slide-2.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-1.jpg",
-          "slide-desc": {
-            "title": "Наші стоматологи",
-            "text": "Відчувати себе захищеним і знати, що про тебе піклуються - це те, що потрібно кожному з нас.<br><br>Ми дуже хочемо, що переступивши поріг нашої клініки, кожен з пацієнтів міг не тільки отримати кваліфіковану допомогу лікарів Prima Dent, але і зануритися в атмосферу довіри, уваги і доброзичливості.",
-            "more": "Записатись на прийом",
-            "additional-class": "our-doctors"
-          }
+          "slide-name": "main-carousel-slide-1.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-3.jpg",
-          "slide-desc": {
-            "title": "Наші стоматологи",
-            "text": "Відчувати себе захищеним і знати, що про тебе піклуються - це те, що потрібно кожному з нас.<br><br>Ми дуже хочемо, що переступивши поріг нашої клініки, кожен з пацієнтів міг не тільки отримати кваліфіковану допомогу лікарів Prima Dent, але і зануритися в атмосферу довіри, уваги і доброзичливості.",
-            "more": "Записатись на прийом",
-            "additional-class": "our-doctors"
-          }
+          "slide-name": "main-carousel-slide-3.jpg"
         },
         {
-          "slide-name": "main-carousel-slide-2.jpg",
-          "slide-desc": {
-            "title": "Наші стоматологи",
-            "text": "Відчувати себе захищеним і знати, що про тебе піклуються - це те, що потрібно кожному з нас.<br><br>Ми дуже хочемо, що переступивши поріг нашої клініки, кожен з пацієнтів міг не тільки отримати кваліфіковану допомогу лікарів Prima Dent, але і зануритися в атмосферу довіри, уваги і доброзичливості.",
-            "more": "Записатись на прийом",
-            "additional-class": "our-doctors"
-          }
+          "slide-name": "main-carousel-slide-2.jpg"
         }
       ]
     },

@@ -112,6 +112,8 @@
   }
   .header {
     position: relative;
+    padding-bottom: 9px;
+    background-color: rgba(30,30,30,1);
     &__main-nav {
       height: auto;
       max-height: 0;
@@ -332,6 +334,11 @@
   }
   .map-wrapper {
     padding-top: 60%;
+  }
+  input[type=checkbox]+label:before {
+    width: 0.77rem;
+    height: 0.75rem;
+    border-width: 1px;
   }
 }
 

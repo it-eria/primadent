@@ -122,10 +122,20 @@ p {
     span {
       display: block;
       position: relative;
+      font-size: 3rem;
+      font-weight: 100;
+      top: -1.5rem;
     }
   }
 }
 
 .carousel-ctrl-btn {
   z-index: 9999;
+}
+
+.modal-body {
+  .dark-text-block {
+    padding-left: 3rem;
+    padding-right: 3rem;    
+  }
 }

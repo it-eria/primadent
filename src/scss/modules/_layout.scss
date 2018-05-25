@@ -508,6 +508,7 @@
     }
   }
   .btn_red {
+    max-width: 219px;
     .icon-down-arr {
       display: inline-block;
       transform-origin: 50% 50%;
@@ -630,6 +631,12 @@
   background-color: rgba($dark-1, .9);
   padding: 40px 30px;
   color: $white;
+  &.bg-light-blue {
+    background-color: #edeeee;
+    * {
+      color: $dark-1;
+    }
+  }
   * {
     color: $white;
   }
@@ -683,7 +690,7 @@
       height: 1px;
       background-color: $red;
       position: absolute;
-      right: 0;
+      right: 4px;
       top: 50%;
       transform: translate(0, -50%);
     }
@@ -698,7 +705,7 @@
       border-left: none;
       transform: translate(0, -50%) rotate(45deg);
       position: absolute;
-      right: -1px;
+      right: 4px;
       top: 50%;
     }
     &:hover {
@@ -1318,6 +1325,13 @@ input[type="checkbox"] {
       top: -5px;
       right: -5px;
     }
+  }
+}
+
+.vacations-list {
+  display: none;
+  li {
+    margin: 0.5rem 0 !important;
   }
 }
 

@@ -24,7 +24,7 @@
                   Ми діагностуємо, проводимо профілактику та лікування захворювань ясен, кореневих каналів, пульп (зубних нервів). Встановлюємо коронки, вініри та мости і звичайно, що пломбуємо зуби. 
                 </p>
                 <div class="text-right mt-4">
-                  <a href="#" class="btn btn_red">Більше інформації</a>
+                  <a href="#" class="btn btn_red" data-toggle="modal" data-target="#tech-modal-{{modal-index}}">Більше інформації</a>
                 </div>
               </div>
             </div>
@@ -41,4 +41,33 @@
       </div>
     </div>
   </div>
+  {{#index-services-slides}}
+  <div class="modal fade tech-modal" id="tech-modal-{{modal-index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="dark-text-block bg-light-blue">
+                <div class="text-right">
+                  <button type="button" class="close position-relative d-inline-block" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <h3>Високотехнічне обладнання</h3>
+                <p>
+                  Ми використовуємо стоматологічні установки нового покоління від одного з кращих світових виробників “KaVo. Dental Excellence”. Інноваційне устаткування допомагає нам якісно та оперативно діагностувати та усувати навіть найскладніші зубні проблеми. Сучасні технології роблять відвідування стоматолога у нашій клініці максимально безпечними, комфортним, а процедури безболісним.
+                </p>
+                <img src="assets/img/tech-1.jpg" alt="img" class="img-fluid">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam omnis, odio voluptatum a nulla distinctio repellendus tempore aliquam ut minima optio repudiandae beatae dolorum fuga blanditiis porro nesciunt. Ducimus repellat vitae nisi similique eius repudiandae fugit dicta nulla laboriosam facilis doloremque cum, fugiat illum temporibus impedit aut reprehenderit corrupti enim provident. Aliquid sunt id, necessitatibus praesentium similique, ipsa, maiores consequatur ratione itaque enim illo voluptates nulla. Repellat quo, tenetur assumenda nisi fugit laborum mollitia molestias doloremque vero culpa odit earum facere voluptatibus veritatis, velit ipsam iusto quas cumque labore deserunt esse sequi nihil! Dolore maiores voluptates optio repellendus fugit officia beatae eaque. Magni accusantium reiciendis accusamus totam, vitae reprehenderit quam earum mollitia similique modi nihil dicta laborum voluptas. Voluptate iste eos rem praesentium ut impedit! Magnam modi nobis quisquam qui quaerat voluptatem ut, dolores fugit culpa incidunt dignissimos doloribus minus quibusdam mollitia, perferendis, eaque aut sed assumenda. Quo commodi quas voluptatibus eligendi itaque ducimus distinctio quidem amet asperiores, labore perspiciatis laudantium. Veniam libero odio porro officia fuga! Magni expedita ratione eos numquam, deserunt, sint commodi quam perspiciatis dicta iure maiores tempore dolore cupiditate in? Praesentium voluptatibus eaque quidem enim veritatis neque facilis architecto sunt non. Deserunt consequatur asperiores nulla commodi!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/index-services-slides}}
 </section>

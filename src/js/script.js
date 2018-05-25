@@ -91,6 +91,11 @@ $(function() {
     $('.team__carousel_photo').slick('slickFilter', '.team__carousel_photo__slide[data-cat="'+val+'"]');
   });
 
+  $('.btn_red.vacations').on('click', function(e) {
+    e.preventDefault();
+    $('.vacations-list').slideToggle(300);
+  });
+
   $(window).on('resize', function(e) {
     clearTimeout(resizeDoneTimer);
     resizeDoneTimer = setTimeout(function() {
