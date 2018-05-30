@@ -114,6 +114,10 @@ $(function() {
   onElementHeightChange(document.body, function() {
     AOS.refresh();
   });
+
+  setTimeout(function() {
+    $('.preloader').fadeOut(300);
+  }, 3500);
 });
 
 function iteriaWatermark() {
