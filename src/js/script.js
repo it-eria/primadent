@@ -2,11 +2,44 @@ $(function() {
   var resizeDoneTimer;
   var windowWidth = $(window).innerWidth();
   var docDescr = [];
+  
+  function docPhoto() {
+    var docSelected = $('select#doctor').val();
+    var docPhoto = $('select#doctor option[value='+docSelected+']').attr('data-doctor');
+    $('.doc-photos-wraper img#'+docPhoto).fadeIn(300);
+  }
+
+  $('.content-block_registered').css('min-height', $(window).height() - $('.header').outerHeight() - $('.footer').outerHeight());
+
+  $(window).on('resize', function() {
+    $('.content-block_registered').css('min-height', $(window).height() - $('.header').outerHeight() - $('.footer').outerHeight());
+  });
+
+  docPhoto();
+
+  $('select#doctor').on('change', function() {
+    $('.doc-photos-wraper img').fadeOut(300);
+    setTimeout(function() {
+      docSelected = $('select#doctor').val();
+      docPhoto = $('select#doctor option[value='+docSelected+']').attr('data-doctor');
+      $('.doc-photos-wraper img#'+docPhoto).fadeIn(300);
+    }, 300);
+  });
+
+
+  $('select#doctor').val();
 
   $('.row.prices').css('display', 'none');
   $('.row.prices').eq(0).css('display', 'flex');
 
   AOS.init();
+
+  $('.to-bottom').on('click', function(e) {
+    e.preventDefault();
+    $('body, html').animate({
+      scrollTop: $(window).height()
+    }, 300);
+  });
 
   // function putLogoItemToNav() {
   //   var logoItem = '<li style="max-width: 0; opacity: 0; top: 0;" class="logo-item d-none d-lg-inline-block"><a href="https://'+window.location.hostname+'/"><img src="assets/img/logo.png" alt="logo"></a></li>';

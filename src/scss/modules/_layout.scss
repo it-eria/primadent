@@ -398,7 +398,7 @@
   }
   &__descr {
     position: absolute;
-    bottom: 0;
+    top: -20px;
     right: 0;
     z-index: 7777;
   }
@@ -1337,4 +1337,71 @@ input[type="checkbox"] {
 
 img.logo {
   height: 2.5rem;
+}
+
+form {
+  img {
+    width: 100%;
+    max-width: 140px !important;
+    &.photo-preview {
+      width: auto;
+      max-width: 100% !important;
+    }
+  }
+}
+
+.to-bottom {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-top: none;
+  border-left: none;
+  position: absolute;
+  bottom: 85px;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 99999;
+  animation: toBottom 3s linear infinite;
+}
+
+@keyframes toBottom {
+  94% {
+    transform: translate(-65%, -50%) rotate(45deg);
+  }
+  96% {
+    transform: translate(-35%, -50%) rotate(45deg);
+  }
+  98% {
+    transform: translate(-65%, -50%) rotate(45deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.doc-photos-wraper {
+  max-width: 140px;
+  max-height: 140px;
+  overflow: hidden;
+  img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-banner {
+    &__carousel {
+      .slide-image {
+        padding-top: 100vh;
+      }
+    }
+    &_inner {
+      &__carousel {
+        .slide-image {
+          padding-top: 100vh;
+        }
+      }
+    }
+  }
 }

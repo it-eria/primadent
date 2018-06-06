@@ -150,3 +150,13 @@ p {
 .modal {
   z-index: 9999;
 }
+
+.min-h-8 {
+  min-height: 8rem;
+}
+
+@media screen and (max-width: 992px) {
+  .min-h-8 {
+    min-height: initial;
+  } 
+}
