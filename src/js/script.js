@@ -5,7 +5,7 @@ $(function() {
   
   function docPhoto() {
     var docSelected = $('select#doctor').val();
-    var docPhoto = $('select#doctor option[value='+docSelected+']').attr('data-doctor');
+    var docPhoto = $('select#doctor option[value="' + docSelected + '"]').attr('data-doctor');
     $('.doc-photos-wraper img#'+docPhoto).fadeIn(300);
   }
 
@@ -21,13 +21,10 @@ $(function() {
     $('.doc-photos-wraper img').fadeOut(300);
     setTimeout(function() {
       docSelected = $('select#doctor').val();
-      docPhoto = $('select#doctor option[value='+docSelected+']').attr('data-doctor');
+      docPhoto = $('select#doctor option[value="' + docSelected + '"]').attr('data-doctor');
       $('.doc-photos-wraper img#'+docPhoto).fadeIn(300);
     }, 300);
   });
-
-
-  $('select#doctor').val();
 
   $('.row.prices').css('display', 'none');
   $('.row.prices').eq(0).css('display', 'flex');
