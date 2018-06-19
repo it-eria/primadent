@@ -624,6 +624,9 @@
       opacity: 1;
     }
   }
+  .review-form {
+    display: none;
+  }
 }
 
 // Dark text block
@@ -1217,7 +1220,7 @@
     display: block;
     width: 100%;
     font-family: $ubuntu-bold;
-    &[for="photo"] {
+    &[for="photo"], &[for="resume"] {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1318,7 +1321,7 @@ input[type="checkbox"] {
   }
 }
 
-.tech-modal {
+.tech-modal, .about-modal, .resume-modal {
   background-color: rgba(0,0,0,.7);
   .modal-content {
     .close {
@@ -1387,6 +1390,20 @@ form {
   img {
     display: none;
   }
+}
+
+.full-screen-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/wall.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 @media screen and (min-width: 992px) {

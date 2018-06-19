@@ -26,8 +26,8 @@ $(function() {
     }, 300);
   });
 
-  $('.row.prices').css('display', 'none');
-  $('.row.prices').eq(0).css('display', 'flex');
+  // $('.row.prices').css('display', 'none');
+  // $('.row.prices').eq(0).css('display', 'flex');
 
   AOS.init();
 
@@ -73,7 +73,10 @@ $(function() {
         $('.row.prices[data-cat="'+cat+'"]').fadeIn(300);
       }, 300);
     } else {
-      $('.row.doctor').fadeIn(300);
+      $('.row.prices').fadeOut(300);
+      setTimeout(function() {
+        $('.row.prices').fadeIn(300);
+      }, 300);
     }
   });
 
@@ -124,6 +127,7 @@ $(function() {
   $('.btn_red.vacations').on('click', function(e) {
     e.preventDefault();
     $('.vacations-list').slideToggle(300);
+    $('.vacations-list').parent().find('form').slideToggle(300);
   });
 
   $(window).on('resize', function(e) {

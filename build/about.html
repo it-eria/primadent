@@ -657,7 +657,7 @@
             </div>
         </div>
     </section>
-    <section class="content-block bg-light-blue">
+    <section class="content-block">
         <div class="container">
             <div class="row contacts justify-content-between align-items-top">
                 <div class="col-12 col-lg-4">
@@ -684,11 +684,33 @@
                             <li class="mb-0">
                                 <a href="#" class="vacations btn btn_red">Вакансії</a>
                                 <ul class="vacations-list">
-                                    <li>Ортодонт</li>
-                                    <li>Стоматолог-хірург</li>
-                                    <li>Адміністратор</li>
-                                    <li>Прибиральниця</li>
+                                    <li><a href="#">Ортодонт</a></li>
+                                    <li><a href="#">Стоматолог-хірург</a></li>
+                                    <li><a href="#">Адміністратор</a></li>
+                                    <li><a href="#">Прибиральниця</a></li>
                                 </ul>
+                                <form action="#" class="review-form mt-5">
+                                    <label for="res-name">Вкажіть ваше ім'я</label>
+                                    <input type="text" placeholder="Ваше ім'я" required="" class="d-block w-100 mb-3" id="res-name">
+                                    <label for="res-surname">Вкажіть ваше прізвище</label>
+                                    <input type="text" placeholder="Ваше прізвище" required="" class="d-block w-100 mb-3" id="res-surname">
+                                    <label for="res-phone">Ваш номер телефону</label>
+                                    <input type="text" placeholder="Телефон" required="" class="d-block w-100 mb-3" id="res-phone">
+                                    <label for="res-review">Коментар</label>
+                                    <textarea placeholder="Ваш коментар" rows="3" required="" class="d-block w-100 mb-3" id="res-review"></textarea>
+                                    <label for="res-position">Позиція на, яку ви претендуєте</label>
+                                    <select id="res-position" class="mb-3">
+                  <option value="0">Ортодонт</option>
+                  <option value="1">Стоматолог-хірург</option>
+                  <option value="2">Адміністратор</option>
+                  <option value="3">Прибиральниця</option>
+                </select>
+                                    <label for="resume"><span>Завантажити резюме</span></label>
+                                    <div class="fileinput">
+                                        <input type="file" id="resume" class="d-block w-100 mb-3">
+                                    </div>
+                                    <input type="submit" value="Надіслати" class="btn btn_red">
+                                </form>
                             </li>
                         </ul>
                     </div>
@@ -774,6 +796,11 @@
                     <div class="col-12">
                         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
                             <ul class="main-banner__socials d-flex align-items-center d-lg-block">
+                                <li>
+                                    <a href="#">
+                  <img src="assets/img/logo-white.svg" alt="logo" class="img-fluid logo">
+                </a>
+                                </li>
                                 <li>
                                     <a href="#">
                   <i class="icon icon-insta-solid"></i>
