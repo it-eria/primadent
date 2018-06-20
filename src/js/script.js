@@ -149,9 +149,13 @@ $(function() {
     AOS.refresh();
   });
 
-  setTimeout(function() {
+  // setTimeout(function() {
+  //   $('.preloader').fadeOut(3000);
+  // }, 3500);
+  $('.preloader video').on('ended', function() {
+    $('body').removeAttr('class');
     $('.preloader').fadeOut(300);
-  }, 3500);
+  });
 });
 
 function iteriaWatermark() {
