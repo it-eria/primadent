@@ -1359,7 +1359,10 @@
               </span>
                             </li>
                             <li class="mb-0">
-                                <a href="#" class="vacations btn btn_red">Вакансії</a>
+                                <a href="#" class="vacations btn btn_red">
+                Вакансії
+                <i class="icon icon-down-arr"></i>
+              </a>
                                 <ul class="vacations-list">
                                     <li><a href="#">Ортодонт</a></li>
                                     <li><a href="#">Стоматолог-хірург</a></li>
@@ -1727,6 +1730,14 @@
             next: '<a class="btn-month btn-month_next"></a>',
             locale: 'ua'
         });
+
+
+        // Contact form
+        document.addEventListener('wpcf7mailsent', function(event) {
+            if ('123' == event.detail.contactFormId) {
+                // do something productive
+            }
+        }, false);
     </script>
 </body>
 

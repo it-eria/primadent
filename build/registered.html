@@ -454,6 +454,14 @@
             next: '<a class="btn-month btn-month_next"></a>',
             locale: 'ua'
         });
+
+
+        // Contact form
+        document.addEventListener('wpcf7mailsent', function(event) {
+            if ('123' == event.detail.contactFormId) {
+                // do something productive
+            }
+        }, false);
     </script>
 </body>
 

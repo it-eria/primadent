@@ -126,6 +126,7 @@ $(function() {
 
   $('.btn_red.vacations').on('click', function(e) {
     e.preventDefault();
+    $(this).toggleClass('clicked');
     $('.vacations-list').slideToggle(300);
     $('.vacations-list').parent().find('form').slideToggle(300);
   });

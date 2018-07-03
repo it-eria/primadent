@@ -6,17 +6,6 @@ body, html {
   color: $dark-1;
 }
 
-body {
-  &.loading {
-    * {
-      opacity: 0;
-    }
-    .preloader, video {
-      opacity: 1;
-    }
-  }
-} 
-
 *, .btn {
   outline: none !important;
   outline: 0 !important;
@@ -60,6 +49,29 @@ h3 {
 p {
   font-size: 1rem;
   margin-top: 20px;
+}
+
+.btn_red {
+  .icon-down-arr {
+    display: inline-block;
+    transform-origin: 50% 50%;
+    transition: all .3s ease-in-out;
+  }
+  &.clicked {
+    .icon-down-arr {
+      transform: translate(0, 3px) rotateX(-180deg);
+    }
+  }
+  &.vacations {
+    .icon-down-arr {
+      margin-top: -7px;
+    }
+    &.clicked {
+      .icon-down-arr {
+        transform: translate(0, 9px) rotateX(-180deg);
+      }
+    }
+  }
 }
 
 // Slick slider
@@ -166,6 +178,10 @@ p {
     width: 100%;
     height: auto;
   }
+}
+
+@media screen and (max-width: 991px) {
+  
 }
 
 .modal {

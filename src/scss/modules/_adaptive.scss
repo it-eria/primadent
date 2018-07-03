@@ -340,9 +340,22 @@
     height: 0.75rem;
     border-width: 1px;
   }
+  .preloader {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 992px) {
+  body {
+    &.loading {
+      * {
+        opacity: 0;
+      }
+      .preloader, video {
+        opacity: 1;
+      }
+    }
+  }
   .services__carousel, .team__carousel_photo, .carousel__gallery {
     .carousel-ctrl-btn {
       top: 50%;

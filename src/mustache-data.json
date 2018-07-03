@@ -568,5 +568,33 @@
         "map": false
       }   
     }
+  },
+  "thanks": {
+    "head": {
+      "title": "Thanks"
+    },
+    "foot": {
+      "vendor-scripts": {
+        "jquery": true,
+        "slick-slider": true,
+        "aos": true,
+        "datepicker": true,
+        "map": false
+      }   
+    }
+  },
+  "error": {
+    "head": {
+      "title": "404"
+    },
+    "foot": {
+      "vendor-scripts": {
+        "jquery": true,
+        "slick-slider": true,
+        "aos": true,
+        "datepicker": true,
+        "map": false
+      }   
+    }
   }
 }

@@ -11,17 +11,220 @@
     <link rel="stylesheet" href="assets/css/vendors/slick-theme.css">
     <link rel="stylesheet" href="assets/css/vendors/pickmeup.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <title></title>
+    <title>Thanks</title>
 </head>
 
-<body class="loading">
-    <!-- <div class="preloader align-items-center justify-content-center position-fixed w-100 h-100">
-  <!-- <img src="assets/img/preloader.gif" alt="loading..." class="img-fluid"> -->
-    <video autoplay="autoplay" muted>
-    <source src="assets/img/404.mp4" type="video/mp4">
-  </video>
-    </div> -->
+<body>
     <div class="full-screen-wrapper">
         <img src="assets/img/thanks.png" alt="thanks" class="img-fluid">
-        <a href="#" class="btn btn_red mt-2">на Головну</a>
+        <a href="#" class="btn btn_red mt-2">на Головну сторінку</a>
     </div>
+    <!-- Jquery -->
+    <script src="assets/js/vendors/jquery-3.3.1.js"></script>
+    <!-- Slick slider -->
+    <script src="assets/js/vendors/slick.min.js"></script>
+    <!-- Animate on scroll -->
+    <script src="assets/js/vendors/aos.js"></script>
+    <!-- Datepicker -->
+    <script src="assets/js/vendors/pickmeup.js"></script>
+    <script src="assets/js/vendors/bootstrap.js"></script>
+    <!-- Custom script -->
+    <script src="assets/js/script.min.js"></script>
+    <!-- Carousels -->
+    <script>
+        var mainBannerCarousel = $('.main-banner__carousel').length;
+        var mainBannerCarouselInner = $('.main-banner_inner__carousel').length;
+        var servicesCarousel = $('.services__carousel').length;
+        var teamDoctorsCarousel = $('.team__carousel_photo').length;
+        var reviewCarousel = $('.reviews__carousel').length;
+        var aboutGallery = $('.carousel__gallery').length;
+        if (mainBannerCarousel > 0) {
+            $('.main-banner__carousel').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplatSpeed: 4000,
+                variableWidth: true,
+                centerMode: true,
+                prevArrow: $('.btn_main-carousel-prev'),
+                nextArrow: $('.btn_main-carousel-next'),
+                dots: true,
+                appendDots: $('.main-banner .dots-place'),
+                responsive: [{
+                    breakpoint: 576,
+                    settings: {
+                        arrows: false,
+                        dots: false
+                    }
+                }]
+            });
+        }
+
+        if (mainBannerCarouselInner > 0) {
+            $('.main-banner_inner__carousel').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplatSpeed: 4000,
+                prevArrow: $('.btn_main-carousel-prev'),
+                nextArrow: $('.btn_main-carousel-next'),
+                dots: true,
+                appendDots: $('.main-banner .dots-place')
+            });
+        }
+
+        if (servicesCarousel > 0) {
+            $('.services__carousel').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplatSpeed: 4000,
+                arrows: true,
+                prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
+                dots: true,
+                appendDots: $('.services .dots-place'),
+                responsive: [{
+                    breakpoint: 576,
+                    settings: {
+                        dots: false,
+                        arrows: true,
+                        prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                        nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">'
+                    }
+                }]
+            });
+        }
+
+        if (teamDoctorsCarousel > 0) {
+            var str = $('.team__carousel_photo').html();
+            var str2 = $('.team__carousel_detail').html();
+
+            function slickParam() {
+                return {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: true,
+                    appendDots: $('.team .dots-place'),
+                    focusOnSelect: true,
+                    arrows: true,
+                    prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                    nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
+                    asNavFor: '.team__carousel_detail',
+                    responsive: [{
+                            breakpoint: 576,
+                            settings: {
+                                slidesToShow: 1,
+                                dots: false
+                            }
+                        },
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+                }
+            }
+
+            function slickParam2() {
+                return {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    arrows: false,
+                    fade: true,
+                    cssEase: 'linear',
+                    draggable: false
+                }
+            }
+
+            $('.team__carousel_photo').slick(slickParam());
+            $('.team__carousel_detail').slick(slickParam2());
+
+            $('#doctors-filter').on('change', function() {
+                var val = $(this).val();
+                $('.team__carousel_photo, .team__carousel_detail').fadeToggle(300);
+                setTimeout(function() {
+                    $('.team__carousel_photo, .team__carousel_detail').slick('unslick');
+                    $('.team__carousel_photo').html(str);
+                    $('.team__carousel_detail').html(str2);
+                    if (val != 0) {
+                        $('.team__carousel_photo .team__carousel_photo__slide:not([data-cat="' + val + '"])').remove();
+                        $('.team__carousel_detail .team__carousel_detail__slide:not([data-cat="' + val + '"])').remove();
+                    }
+                    $('.team__carousel_photo').slick(slickParam());
+                    $('.team__carousel_detail').slick(slickParam2());
+                }, 300);
+                $('.team__carousel_photo, .team__carousel_detail').fadeToggle(300);
+                AOS.refresh();
+                AOS.refreshHard();
+            });
+        }
+
+        if (reviewCarousel > 0) {
+            $('.reviews__carousel').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                appendDots: $('.reviews .dots-place'),
+                arrows: true,
+                prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
+                responsive: [{
+                    breakpoint: 991,
+                    settings: {
+                        dots: false
+                    }
+                }]
+            });
+        }
+
+        if (aboutGallery > 0) {
+            $('.carousel__gallery').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_prev">',
+                nextArrow: '<a href="#" class="carousel-ctrl-btn carousel-ctrl-btn_next">',
+                dots: true,
+                appendDots: $('.about-gallery .dots-place')
+            });
+        }
+    </script>
+    <!-- Datepicker -->
+    <script>
+        pickmeup.defaults.locales['ru'] = {
+            days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+            daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+        };
+        pickmeup.defaults.locales['ua'] = {
+            days: ['Неділя', 'Плнеділок', 'Вівторок', 'Середа', 'Четвер', 'П\'ятниця', 'Субота'],
+            daysShort: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            daysMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            months: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
+            monthsShort: ['Січ', 'Лют', 'Бер', 'Кві', 'Тра', 'Чер', 'Лип', 'Сер', 'Вер', 'Жов', 'Лис', 'Гру']
+        };
+        pickmeup('#date', {
+            format: 'd.m.Y',
+            title_format: 'B',
+            prev: '<a class="btn-month btn-month_prev"></a>',
+            next: '<a class="btn-month btn-month_next"></a>',
+            locale: 'ua'
+        });
+
+
+        // Contact form
+        document.addEventListener('wpcf7mailsent', function(event) {
+            if ('123' == event.detail.contactFormId) {
+                // do something productive
+            }
+        }, false);
+    </script>
+</body>
+
+</html>
