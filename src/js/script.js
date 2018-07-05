@@ -91,15 +91,17 @@ $(function() {
   // putLogoItemToNav();
   teamRowHeight();
 
-  $('.review-form input[type=file]').on('change', function(e) {
+  $('input[type=file]').on('change', function(e) {
     var filename = e.target.files[0].name;
-    $('label[for="photo"] span').text(filename);
+    var parent = $(this).parent().parent();
+    $(this).parent().parent().find('label[for="photo"] span').text(filename);
+    $(this).parent().parent().find('label[for="resume"] span').text(filename);
     if (e.target.files && e.target.files[0]) {
       var reader = new FileReader();
   
       reader.onload = function(e) {
-        $('.photo-preview').attr('src', e.target.result);
-        $('.photo-preview').fadeIn(300);
+        $(parent).find('.photo-preview').attr('src', e.target.result);
+        $(parent).find('.photo-preview').fadeIn(300);
       }
   
       reader.readAsDataURL(e.target.files[0]);

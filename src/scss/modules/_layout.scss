@@ -1422,3 +1422,38 @@ form {
     }
   }
 }
+
+.dark-square {
+  width: 90%;
+  max-width: 918px;
+  background-color: rgba(#1e1e1e, .9);
+  padding: 20px 0 28px;
+  text-align: center;
+  box-shadow: 0 0 25px 20px #fff;
+  img {
+    width: 90%;
+    max-width: 655px;
+  }
+}
+
+
+.thanks-text {
+  margin: 2rem 0;
+  p {
+    font-family: $ubuntu-regular;
+    font-size: 1.5rem;
+    line-height: auto;
+    color: #373736;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-family: $ubuntu-regular;
+    font-size: 12.5rem;
+    line-height: auto;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 25px rgba(#000, .5);
+  }
+}
